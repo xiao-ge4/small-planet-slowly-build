@@ -1,0 +1,13 @@
+{
+  "buildId": "1f00477ea310e593a95826fee878e194e4bf5ab617f18d39b00bf437cd7497c8",
+  "createdAt": "2026-11-01T12:08:09.5593710Z",
+  "success": true,
+  "assets": 11,
+  "scenes": [
+    "Assets/SmallWorldV1/SmallWorldBoot.unity",
+    "Assets/SmallWorldV1/DawnHomeV1.unity",
+    "Assets/SmallWorldV1/EmberHomeV1.unity",
+    "Assets/SmallWorldV1/StarDewHomeV2.unity",
+    "Assets/SmallWorldV1/WindCourtHomeV2.unity"
+  ]
+}

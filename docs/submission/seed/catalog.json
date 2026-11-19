@@ -1,0 +1,1627 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "ember-boulder",
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-boulder.prefab",
+      "previewPath": "docs/submission/seed/previews/ember-boulder.png",
+      "size": {
+        "x": 1.3352569341659546,
+        "y": 0.9008614420890808,
+        "z": 1.387143611907959
+      },
+      "center": {
+        "x": 0.000610649585723877,
+        "y": 0.44956931471824646,
+        "z": 0.0002015829086303711
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-boulder/lod0.glb",
+          "sha256": "2eedc1890b1b962f64b481407f8ab618c3a3b7939a12341eadafb66ce45dd9a5"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-boulder/lod1.glb",
+          "sha256": "2bbe81ea757eae1aa260bd923b8b3c801999ef1a48bb05c66e71ee6b7936bca4"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-boulder/lod2.glb",
+          "sha256": "459394a98aae55b2f0137f8f2398e19c4fa4fad239ce64f3ec256f6e7fed5a20"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/EmberCamp/ember-boulder.prefab",
+          "sha256": "7b8c14275c280b406f2dbbc69d9c085a4c25fe93339fc04a852cfea1e78163e3"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "ember-monument",
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-monument.prefab",
+      "previewPath": "docs/submission/seed/previews/ember-monument.png",
+      "size": {
+        "x": 0.9792933464050293,
+        "y": 1.750337839126587,
+        "z": 0.5584172010421753
+      },
+      "center": {
+        "x": -0.0002111494541168213,
+        "y": 0.8751689195632935,
+        "z": 0.00028458237648010254
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR.001"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-monument/lod0.glb",
+          "sha256": "107960443c3b648cfe06f2b3d6594f5a7610a1d88cbb2ed76e691a306fe21931"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-monument/lod1.glb",
+          "sha256": "d55c72152e158f048171994f1e921cc6018334a9cfde3ae49516b24ae5f892e0"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-monument/lod2.glb",
+          "sha256": "425e0a8e1440c41a6e5fa3fcad605bf4cfd7b6d1e0188757214cfee1fc951e3b"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/EmberCamp/ember-monument.prefab",
+          "sha256": "fb39185bd7538a4d71c6df241ce7cb861979afe9e1c0de105ad3e77bd21a4526"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "ember-seedling",
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-seedling.prefab",
+      "previewPath": "docs/submission/seed/previews/ember-seedling.png",
+      "size": {
+        "x": 0.48720940947532654,
+        "y": 0.5201373100280762,
+        "z": 0.1797095537185669
+      },
+      "center": {
+        "x": -1.0341405868530273e-05,
+        "y": 0.26005783677101135,
+        "z": -5.125999450683594e-06
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR.001"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-seedling/lod0.glb",
+          "sha256": "c8a89afcdc1af7674166916e22b01ae041643e2380620226a86d63f854d2a171"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-seedling/lod1.glb",
+          "sha256": "c5f2a47660cf671e81689ffbe083955eef068b792395dceb26c79d6c4156153d"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-seedling/lod2.glb",
+          "sha256": "32e9fbe067c42a7ffb1a51d0641063ecafbc3da55518b1338a4a4fbda0c8a6ce"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/EmberCamp/ember-seedling.prefab",
+          "sha256": "49760701d3fc3875173537ee8978d4a9747d372790f708f8b5b5c51612472dfe"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "ember-tent-v2",
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-tent-v2.prefab",
+      "previewPath": "docs/submission/seed/previews/ember-tent-v2.png",
+      "size": {
+        "x": 2.104250192642212,
+        "y": 2.0602126121520996,
+        "z": 2.0982439517974854
+      },
+      "center": {
+        "x": 0.0005099773406982422,
+        "y": 1.0210939645767212,
+        "z": 0.0004832744598388672
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-tent-v2/lod0.glb",
+          "sha256": "14baf28dd3a9fc14d4510e62ac9adaceece6c26ec73d03c9a181a6676c0ee528"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-tent-v2/lod1.glb",
+          "sha256": "c375de1ec5dfd0c6f93180b5503e27fbf6de9c4fd9a22eb900f53d0a4df47565"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-tent-v2/lod2.glb",
+          "sha256": "72ec5d35e4cbee82f2917851553975f4d36c87b794148a183ac3f7405d8612fe"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/EmberCamp/ember-tent-v2.prefab",
+          "sha256": "347ad3cd61e59bdd0fc5d0359403b4472bfa4a862462adaa2aefd4ec7020b48c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "ember-tree",
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-tree.prefab",
+      "previewPath": "docs/submission/seed/previews/ember-tree.png",
+      "size": {
+        "x": 2.989640474319458,
+        "y": 3.2580337524414062,
+        "z": 2.7325682640075684
+      },
+      "center": {
+        "x": 0.0006791353225708008,
+        "y": 1.6222690343856812,
+        "z": -0.001866459846496582
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-tree/lod0.glb",
+          "sha256": "e9332996952c04fa0efb436d59fd0b023a16af6161acecd53383a4023abca645"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-tree/lod1.glb",
+          "sha256": "439529d46c028dd4ff903d5974e2922f66ac7f1a2a789820e130bbc2d4b97935"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/EmberCamp/ember-tree/lod2.glb",
+          "sha256": "eee58788fa2a007b69a3d5ad13344fe51cbf6bde0f7a083c2966d36a39edaaae"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/EmberCamp/ember-tree.prefab",
+          "sha256": "6ca4c945b07ed5546be8395071126b1d68d4cf7633c3666c35fe35c1b5ae491f"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "garden-seedling",
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/garden-seedling.prefab",
+      "previewPath": "docs/submission/seed/previews/garden-seedling.png",
+      "size": {
+        "x": 0.5208971500396729,
+        "y": 0.520058274269104,
+        "z": 0.18904131650924683
+      },
+      "center": {
+        "x": -6.80387020111084e-05,
+        "y": 0.25997093319892883,
+        "z": -6.510317325592041e-05
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR.001"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Garden/garden-seedling/lod0.glb",
+          "sha256": "03825b66856bc462cb38e72bb608fc63ccddc5a568fe7af5ab7b0d9e50125cbf"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/garden-seedling/lod1.glb",
+          "sha256": "f8b09e8fd75dde18c236f62e0f2b124449b99c4095dba80d0d5fab85fd05f717"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/garden-seedling/lod2.glb",
+          "sha256": "668e61cf3a7783ef1097b31d0c0d76d17bbcd3b69b4ad5b7ddafd716d3f6b1ea"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/Garden/garden-seedling.prefab",
+          "sha256": "3d7b4bb1b31d3655662b3255f95de6859ad20eb0f454c047eeac7e69c7c98dcf"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "garden-tree",
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/garden-tree.prefab",
+      "previewPath": "docs/submission/seed/previews/garden-tree.png",
+      "size": {
+        "x": 3.207664728164673,
+        "y": 3.5198705196380615,
+        "z": 3.104614734649658
+      },
+      "center": {
+        "x": -0.0075185298919677734,
+        "y": 1.757623314857483,
+        "z": 0.005808830261230469
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Garden/garden-tree/lod0.glb",
+          "sha256": "9cffc5d71be5a0d577835a450f70f859b69066415544aea0de5d6c97a7bb1f9c"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/garden-tree/lod1.glb",
+          "sha256": "267a6586f012c74b08ed0123272f1f2b46f99d3634867e290857acf4a1982d11"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/garden-tree/lod2.glb",
+          "sha256": "4dd242d81b8aaca9fecee3cef93645644dea478885d283fa6581c9fa51c79b0c"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/Garden/garden-tree.prefab",
+          "sha256": "a07872e6a02e33dfb15a7537756937585b92f753d048c6b087ab216a33ff4e6a"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "meadow-flower",
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/meadow-flower.prefab",
+      "previewPath": "docs/submission/seed/previews/meadow-flower.png",
+      "size": {
+        "x": 0.2683621644973755,
+        "y": 0.2839999794960022,
+        "z": 0.28217267990112305
+      },
+      "center": {
+        "x": -0.001818925142288208,
+        "y": 0.1419999897480011,
+        "z": 1.4901161193847656e-08
+      },
+      "hasCollider": false,
+      "hasLod": false,
+      "materials": [
+        "Warm yellow",
+        "Ivory petals",
+        "Flower stem",
+        "Leaf meadow"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Garden/meadow-flower.glb",
+          "sha256": "2031198132a4859fddcbe92631c27531cc69e6e0ff2c08a386e7de262f2fbc2a"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/Garden/meadow-flower.prefab",
+          "sha256": "6e4d2301fe98553acaef7817c42fcd82148adb698d27159827b8d61ebcc27b7a"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "moss-boulder",
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/moss-boulder.prefab",
+      "previewPath": "docs/submission/seed/previews/moss-boulder.png",
+      "size": {
+        "x": 2.029989719390869,
+        "y": 1.0000452995300293,
+        "z": 2.0304179191589355
+      },
+      "center": {
+        "x": -0.0009195804595947266,
+        "y": 0.49997732043266296,
+        "z": 0.0008634328842163086
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR.001"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Garden/moss-boulder/lod0.glb",
+          "sha256": "7d298e2a1379ef63947b7aaec164c90b1c339211146f6e675a942a78bf944013"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/moss-boulder/lod1.glb",
+          "sha256": "cba7d16f239024cf4f90a100803c96923c693e41df023a6482e133d5afc406a2"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/moss-boulder/lod2.glb",
+          "sha256": "278477eba77495ae76d56bc187977beb821525ec13ec6af6dc1302a1baa2af95"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/Garden/moss-boulder.prefab",
+          "sha256": "e6b7d3e6aa80b523847116748d513ad592e49f97322912fa3ca1b7172a45ccf0"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "stepping-stone",
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/stepping-stone.prefab",
+      "previewPath": "docs/submission/seed/previews/stepping-stone.png",
+      "size": {
+        "x": 0.6417136788368225,
+        "y": 0.10999999940395355,
+        "z": 0.5000476241111755
+      },
+      "center": {
+        "x": -0.005077667068690062,
+        "y": 0.0,
+        "z": 0.0031195878982543945
+      },
+      "hasCollider": false,
+      "hasLod": false,
+      "materials": [
+        "Warm limestone"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Garden/stepping-stone.glb",
+          "sha256": "aa4f60a1ea1cc0281f2d6730192988deee7f85b3d2f978dafc501ba091d40121"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/Garden/stepping-stone.prefab",
+          "sha256": "d52fcabcd6ac8afd6cba9c1bcb435490a614043d599c3be4a7dc74fbd1c899c7"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "tool-stump",
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/tool-stump.prefab",
+      "previewPath": "docs/submission/seed/previews/tool-stump.png",
+      "size": {
+        "x": 0.9124120473861694,
+        "y": 0.5154641270637512,
+        "z": 0.9593667984008789
+      },
+      "center": {
+        "x": -0.02379399538040161,
+        "y": 0.2577320635318756,
+        "z": 0.0
+      },
+      "hasCollider": false,
+      "hasLod": false,
+      "materials": [
+        "Growth rings",
+        "Golden bark",
+        "Fresh wood"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Garden/tool-stump.glb",
+          "sha256": "04ade03ae9feb54d6a4593c6451e49fa4edfc3ed0471f74ef0147c7458ae2510"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/Garden/tool-stump.prefab",
+          "sha256": "c0f01e747f468719208e061f99940bee1773c1c6b9b35b8aaad5268b7f1251a8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "travel-monument",
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/travel-monument.prefab",
+      "previewPath": "docs/submission/seed/previews/travel-monument.png",
+      "size": {
+        "x": 1.0934195518493652,
+        "y": 1.7518284320831299,
+        "z": 0.6327013373374939
+      },
+      "center": {
+        "x": 0.0003940463066101074,
+        "y": 0.8746145367622375,
+        "z": -5.066394805908203e-05
+      },
+      "hasCollider": false,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Garden/travel-monument/lod0.glb",
+          "sha256": "c61cf8bb0d09812a59e4d38f618a76e0f677318c0e45208cacfb309274c51bdd"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/travel-monument/lod1.glb",
+          "sha256": "331516267c7305ecb3121b2c4ce3a0d32cb9210c4b9372f87708abecc7df6f9b"
+        },
+        {
+          "path": "Assets/DawnGarden/Art/Garden/travel-monument/lod2.glb",
+          "sha256": "eb9f99e21410ee08e83f5fe7ba84ccfa40e1464744040f27e696ff1beb3d4610"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/Garden/travel-monument.prefab",
+          "sha256": "82ea8dcf3b75dcc4e1a58fdb4756d503fda7c49adf7ed38a866dc3a293211717"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "hinged-chest",
+      "prefabPath": "Assets/DawnGarden/Prefabs/InteractiveChest.prefab",
+      "previewPath": "docs/submission/seed/previews/hinged-chest.png",
+      "size": {
+        "x": 0.6796024441719055,
+        "y": 0.6800000071525574,
+        "z": 0.6250479221343994
+      },
+      "center": {
+        "x": 0.0,
+        "y": 0.3400000035762787,
+        "z": 0.0
+      },
+      "hasCollider": true,
+      "hasLod": false,
+      "materials": [
+        "Designer_Logic_PBR",
+        "Interior dark wood"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Props/InteractiveChest.glb",
+          "sha256": "7ff376f6ffad11df370c84b43ff9a2ffc4d0f75d1a889a1bbaae150e4870f278"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/InteractiveChest.prefab",
+          "sha256": "4762daa07636385a82d71cbe3fa30f8ae92256144dfa304cc3bce7cd20df63ad"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "watering-can",
+      "prefabPath": "Assets/DawnGarden/Prefabs/WateringCan.prefab",
+      "previewPath": "docs/submission/seed/previews/watering-can.png",
+      "size": {
+        "x": 0.4793441593647003,
+        "y": 0.46000003814697266,
+        "z": 0.2768849730491638
+      },
+      "center": {
+        "x": 0.0,
+        "y": 0.23000001907348633,
+        "z": 0.0
+      },
+      "hasCollider": false,
+      "hasLod": false,
+      "materials": [
+        "Designer_Logic_PBR"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/Art/Props/WateringCan.glb",
+          "sha256": "8ea38216786b14726e2b6706103bf76b164154f9e1680dc58d463f21b8df5c2e"
+        },
+        {
+          "path": "Assets/DawnGarden/Prefabs/WateringCan.prefab",
+          "sha256": "054f794cc99d58b3f33f08b1a5aeb7a234e8a9f41083d2833fb9ebb863d6b65a"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    },
+    {
+      "id": "mossy-stone-bench",
+      "prefabPath": "Assets/DawnGarden/PreparedHomes/3ea386b9e1f54c399406cc67a44c4430/v1/mossy-stone-bench/mossy-stone-bench.prefab",
+      "previewPath": "docs/submission/seed/previews/mossy-stone-bench.png",
+      "size": {
+        "x": 1.3992280960083008,
+        "y": 0.4503713846206665,
+        "z": 0.6348565220832825
+      },
+      "center": {
+        "x": 0.0,
+        "y": 0.22508148849010468,
+        "z": -1.6987323760986328e-05
+      },
+      "hasCollider": true,
+      "hasLod": true,
+      "materials": [
+        "Designer_Logic_PBR",
+        "Designer_Logic_PBR.001",
+        "Designer_Logic_PBR.002"
+      ],
+      "dependencies": [
+        {
+          "path": "Assets/DawnGarden/PreparedHomes/3ea386b9e1f54c399406cc67a44c4430/v1/mossy-stone-bench/Models/lod0.glb",
+          "sha256": "9fb2e4d56ed3ad0171a768f41dbeff4de2caa0c8c7161675f2891087f0bb128b"
+        },
+        {
+          "path": "Assets/DawnGarden/PreparedHomes/3ea386b9e1f54c399406cc67a44c4430/v1/mossy-stone-bench/Models/lod1.glb",
+          "sha256": "d26c8d0ec71b1897a7c22c2f02684565e8cd2044fa447ca2b955087016f42b4d"
+        },
+        {
+          "path": "Assets/DawnGarden/PreparedHomes/3ea386b9e1f54c399406cc67a44c4430/v1/mossy-stone-bench/Models/lod2.glb",
+          "sha256": "3c5c440f3a101ff6ad632a09c1ff84bf1b9d76b81b63664689c38bd57816723f"
+        },
+        {
+          "path": "Assets/DawnGarden/PreparedHomes/3ea386b9e1f54c399406cc67a44c4430/v1/mossy-stone-bench/mossy-stone-bench.prefab",
+          "sha256": "1be6a21cad47e80bb29de6dcd5c67ffecf03c3462ae439fcd1688f584c082f4e"
+        },
+        {
+          "path": "Assets/DawnGarden/Scripts/PreparedHomeAsset.cs",
+          "sha256": "0e70b2982259729ce66a514c9682cf124415992d721de97d2377210d7464a242"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Editor/Scripts/GltfImporter.cs",
+          "sha256": "b7c93a0a464a089a11de23bb2d753579226be7de8ffee22ff40bd4ceb9aa3eb4"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/glTF-pbrMetallicRoughness.shadergraph",
+          "sha256": "cc08b4fec2eab6e08a2522e624fbea68b6fd2e5eb13ea4985489a7b23e56e91b"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/Includes/Emission.cginc",
+          "sha256": "03775fd176ecf90b94f55c554d311cdaf504f114a43d6179111068c14e158c38"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/BaseColor.shadersubgraph",
+          "sha256": "4e1abcfae26c14bb7e81820dbd9a7ab089bf3e4afa3ba542a6b86ebb55fae9c8"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Emission.shadersubgraph",
+          "sha256": "f1149ea9b7d9c19644ff9bf78b175c968b6c9a589dd12a4dcfcddc57f632e8df"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/MetallicRoughness.shadersubgraph",
+          "sha256": "bf1631c5e54410c610e754d9d75d116112713e6ff0f240e1d43c9c4fb599e553"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Normal.shadersubgraph",
+          "sha256": "6d4aa33a73a4b7795a0e44e9b0522d438ff6c3f737f20169448f92718ac5124c"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/Occlusion.shadersubgraph",
+          "sha256": "cbbdfdc8f51fb580ee7bddc13a7528f5ebc4ec166c1b4bc1892aea25993e34e5"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/PBR_metallic_roughness.shadersubgraph",
+          "sha256": "e143ae4fd9933d9b1d96f2b83f8fcc571d624be640b15ea392be040d5030fb77"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/ScreenGrab.shadersubgraph",
+          "sha256": "c363dec4b7fa663f4d0ce24817cdea95f09fdd64f3dc81c7e32147d2708b0638"
+        },
+        {
+          "path": "Packages/com.unity.cloud.gltfast/Runtime/Shader/SubGraphs/TextureTransform.shadersubgraph",
+          "sha256": "549dbc0bf4bd749d52fd4cc11b4d3dce778156e85ced397386cb351f4b89def9"
+        },
+        {
+          "path": "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+          "sha256": "88083201ba4b354bde926decedd11354a32b41a69e49efcd08eabe095cb15a5a"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Data/SubGraph/SubGraphAsset.cs",
+          "sha256": "9d33adfdd4dfaf63a9fc7838e550ab7280894a4eee0db09f75e251b10fe16e8e"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Generation/Targets/BuiltIn/Editor/ShaderGraph/BuiltInMetadata.cs",
+          "sha256": "8d0c765ce2d02daf1a6d9c4f475c57a4e7ca62ae5c319350c784bc8bfdb9baf2"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+          "sha256": "572a4dd745eb8d77afe20f19dc34da1b4ca7e6c13a6e74fe7287f75dbf04108f"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs",
+          "sha256": "c86716f1ecc1257883b2c67ddcb00d612d7b302e215e8bbaeb8e919f16202385"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphImporter.cs",
+          "sha256": "b8979509b2492fd58ed840c86c38519f6f5323c4cccdd9eeaffdf65470c7e3d1"
+        },
+        {
+          "path": "Packages/com.unity.shadergraph/Editor/Importers/ShaderSubGraphMetadata.cs",
+          "sha256": "8b05fd83982e45edfd34e4349961235c679146e9564fc2ec2bef983c1ff0cdb0"
+        }
+      ]
+    }
+  ]
+}

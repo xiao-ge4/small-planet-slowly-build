@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f0bfbda85f0474595c24dd336ee659, type: 3}
+  m_Name: SmallWorldLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::DawnGarden.SmallWorldLibrary
+  assets:
+  - id: ember-boulder
+    name: "\u6696\u7130\u7802\u5CA9"
+    hash: 2e4b96035a44a327fbfa7bf6f8698357b737861330d5663a7769f6e0ebb16254
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 8436341396968476443, guid: 301a5e136617f4c79989beb62f22cd39, type: 3}
+    size: {x: 1.3352569, y: 0.90086144, z: 1.3871436}
+    center: {x: 0.0006106496, y: 0.4495693, z: 0.00020158291}
+    collisionCenter: {x: 0.0006106496, y: 0.40452623, z: 0.00020158291}
+    collisionSize: {x: 1.1349684, y: 0.8107753, z: 1.179072}
+    createCollider: 1
+    decorationOnly: 0
+  - id: ember-monument
+    name: "\u6696\u7130\u77F3\u7891"
+    hash: 41bffef91d45172139f69e137c89391ea1c6e2cfe143a58e749855b9c4bd3676
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 6231611527350998964, guid: 1c62d7a0a9ff04557953fc84b3688632, type: 3}
+    size: {x: 0.97929335, y: 1.7503378, z: 0.5584172}
+    center: {x: -0.00021114945, y: 0.8751689, z: 0.00028458238}
+    collisionCenter: {x: -0.00021114945, y: 0.787652, z: 0.00028458238}
+    collisionSize: {x: 0.83239937, y: 1.575304, z: 0.47465461}
+    createCollider: 1
+    decorationOnly: 0
+  - id: ember-tent-v2
+    name: "\u6696\u7130\u8425\u5E10"
+    hash: 481e34228a7f53f4074228aac3d34e8e3f464f63ee48856ee5e4d374d06fb558
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 6183098813105001147, guid: eb0b8dd5f086641c6b85549654804943, type: 3}
+    size: {x: 2.1042502, y: 2.0602126, z: 2.098244}
+    center: {x: 0.00050997734, y: 1.021094, z: 0.00048327446}
+    collisionCenter: {x: 0.00050997734, y: 0.9180833, z: 0.00048327446}
+    collisionSize: {x: 1.7886126, y: 1.8541913, z: 1.7835073}
+    createCollider: 1
+    decorationOnly: 0
+  - id: ember-tree
+    name: "\u6696\u7130\u6811\u6728"
+    hash: 0848cddd019c51901a202f767a03829aefcc9b2d5abe7157b259f3b941d389e9
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 8242355156907595038, guid: a32f30a03e0d44408a2eca82d8c343ea, type: 3}
+    size: {x: 2.9896405, y: 3.2580338, z: 2.7325683}
+    center: {x: 0.0006791353, y: 1.622269, z: -0.0018664598}
+    collisionCenter: {x: 0.0006791353, y: 0.8077606, z: -0.0018664598}
+    collisionSize: {x: 0.7474101, y: 1.6290169, z: 0.68314207}
+    createCollider: 1
+    decorationOnly: 0
+  - id: garden-tree
+    name: "\u6668\u66E6\u9614\u53F6\u6811"
+    hash: b6c5e2fbd0e0a11b5872fa6a8d809d8f001ee691fb1b3b550d60663f04bdd78b
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 5102520120457687443, guid: d19a9c813cc044037b2eedadd10bdfe1, type: 3}
+    size: {x: 3.2076647, y: 3.5198705, z: 3.1046147}
+    center: {x: -0.00751853, y: 1.7576233, z: 0.0058088303}
+    collisionCenter: {x: -0.00751853, y: 0.8776557, z: 0.0058088303}
+    collisionSize: {x: 0.8019162, y: 1.7599353, z: 0.7761537}
+    createCollider: 1
+    decorationOnly: 0
+  - id: meadow-flower
+    name: "\u8349\u5730\u5C0F\u767D\u82B1"
+    hash: 53945511a01cef385d8fbc3877875fc31bef922ee86e8902483c774eea1d1aa8
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 3380142656378009730, guid: 28f442b32088345998a5b3ba6d95b873, type: 3}
+    size: {x: 0.26836216, y: 0.28399998, z: 0.28217268}
+    center: {x: -0.0018189251, y: 0.14199999, z: 0.000000014901161}
+    collisionCenter: {x: 0, y: 0, z: 0}
+    collisionSize: {x: 0, y: 0, z: 0}
+    createCollider: 0
+    decorationOnly: 0
+  - id: moss-boulder
+    name: "\u82D4\u85D3\u5CA9\u77F3"
+    hash: 2ccce96d443f655fbd0fca47e3177241ccd98f3bd517ec6d41c2a8206b4c7766
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 4267710975834465320, guid: 19c01292802be443db04975a2e2a99e2, type: 3}
+    size: {x: 2.0299897, y: 1.0000453, z: 2.030418}
+    center: {x: -0.00091958046, y: 0.49997732, z: 0.0008634329}
+    collisionCenter: {x: -0.00091958046, y: 0.44997504, z: 0.0008634329}
+    collisionSize: {x: 1.7254913, y: 0.90004075, z: 1.7258552}
+    createCollider: 1
+    decorationOnly: 0
+  - id: mossy-stone-bench
+    name: "\u82D4\u77F3\u957F\u51F3"
+    hash: 5c32a4ab36939705655eac38d3e13bcd4dceaae65db3ca53665cbe2eaf4b8930
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 1517922327676292306, guid: 5ee9d1d40bc934d68aa490661942d0cd, type: 3}
+    size: {x: 1.3992281, y: 0.45037138, z: 0.6348565}
+    center: {x: 0, y: 0.22508149, z: -0.000016987324}
+    collisionCenter: {x: 0, y: 0, z: 0}
+    collisionSize: {x: 0, y: 0, z: 0}
+    createCollider: 0
+    decorationOnly: 0
+  - id: stepping-stone
+    name: "\u77F3\u677F\u8DEF"
+    hash: 5c2b47ff90e67de3b0dded426b72b200260585ff4e329518e79a67a9cda90d94
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 3605735402209612634, guid: 1535a8e1b4c824b51a51ecb305308409, type: 3}
+    size: {x: 0.6417137, y: 0.11, z: 0.5000476}
+    center: {x: -0.005077667, y: 0, z: 0.003119588}
+    collisionCenter: {x: 0, y: 0, z: 0}
+    collisionSize: {x: 0, y: 0, z: 0}
+    createCollider: 0
+    decorationOnly: 0
+  - id: tool-stump
+    name: "\u5DE5\u5177\u6811\u6869"
+    hash: 638dd785f316d697d9d17e999894ca2199861731adb38c336341b43e219ae675
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 4510285337705526336, guid: 4d3c238f24b1646a1a83bc4115ef89e7, type: 3}
+    size: {x: 0.91241205, y: 0.5154641, z: 0.9593668}
+    center: {x: -0.023793995, y: 0.25773206, z: 0}
+    collisionCenter: {x: -0.023793995, y: 0.23195885, z: 0}
+    collisionSize: {x: 0.77555025, y: 0.4639177, z: 0.81546175}
+    createCollider: 1
+    decorationOnly: 0
+  - id: travel-monument
+    name: "\u6668\u66E6\u6C34\u6676\u77F3\u7891"
+    hash: aa43f84e09a8ca2c99badab7e7349cebda6dffb593df5ca7a37d564fc23bbec6
+    previewUrl: 
+    modelUrl: 
+    modelSha256: 
+    version: 1
+    prefab: {fileID: 2107521798017944389, guid: 1c69c50f4c9f74ba88c390b96fb03357, type: 3}
+    size: {x: 1.0934196, y: 1.7518284, z: 0.63270134}
+    center: {x: 0.0003940463, y: 0.87461454, z: -0.000050663948}
+    collisionCenter: {x: 0.0003940463, y: 0.7870231, z: -0.000050663948}
+    collisionSize: {x: 0.92940664, y: 1.5766456, z: 0.53779614}
+    createCollider: 1
+    decorationOnly: 0
+  font: {fileID: 12800000, guid: 38823a935984145a9802de214730ef03, type: 3}
+  buildId: 1f00477ea310e593a95826fee878e194e4bf5ab617f18d39b00bf437cd7497c8

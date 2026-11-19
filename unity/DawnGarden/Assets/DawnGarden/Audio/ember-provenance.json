@@ -1,0 +1,26 @@
+{
+  "title": "暖焰与星夜",
+  "composition": "Original deterministic synthesis; no third-party recordings or samples.",
+  "bpm": 72,
+  "bars": 32,
+  "tracks": [
+    {
+      "file": "EmberMorning.wav",
+      "durationSeconds": 106.66666666666667,
+      "sampleRate": 22050,
+      "channels": 2,
+      "peak": 0.68,
+      "rms": 0.13914489733717073,
+      "loopBoundaryDelta": 0.013999773135225296
+    },
+    {
+      "file": "EmberMoonlight.wav",
+      "durationSeconds": 106.66666666666667,
+      "sampleRate": 22050,
+      "channels": 2,
+      "peak": 0.68,
+      "rms": 0.16898394947805265,
+      "loopBoundaryDelta": 0.009373810015636082
+    }
+  ]
+}

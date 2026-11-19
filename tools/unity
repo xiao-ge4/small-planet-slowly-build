@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+cli='/Applications/Unity Hub.app/Contents/Resources/unity'
+if [ ! -x "$cli" ]; then
+  echo 'Unity Hub is not installed at /Applications/Unity Hub.app' >&2
+  exit 1
+fi
+exec "$cli" "$@"

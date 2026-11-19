@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "id": "home-creation-pipeline-v1",
+  "boundaryContract": "contracts/home-creation-boundaries.v1.json",
+  "mode": "contract-and-offline-replay-only",
+  "stages": [
+    {
+      "id": "brief",
+      "title": "需求与空间约定",
+      "dependsOn": [],
+      "inputs": ["playerIdea", "optionalReferences", "plotGrant", "boundarySnapshot"],
+      "outputs": ["brief.json"],
+      "requiredFields": ["plotGrant", "theme", "mustHave", "mustAvoid", "interactionKinds", "budgetCaps", "boundaryRef"],
+      "exitChecks": ["plot grant supplies starter-sized terrain and connection", "interaction kinds supported", "ask only unresolved decisions"],
+      "playerGate": "clarify-conflicting-or-missing-requirements",
+      "onFailure": "ask-targeted-question"
+    },
+    {
+      "id": "concept",
+      "title": "整体概念图迭代",
+      "dependsOn": ["brief"],
+      "inputs": ["brief.json", "orderedReferenceImages", "terrainAndConnectionGuide"],
+      "outputs": ["concept.json", "concept-image", "image-review.json"],
+      "requiredFields": ["versionId", "imageRef", "sourceRefs", "actualPrompt", "providerModel", "requestRecordRef", "review"],
+      "exitChecks": ["single complete plot", "terrain footprint and access respected", "no unintended labels or extra scenes", "user selects exact version"],
+      "playerGate": "concept",
+      "onFailure": "edit-selected-image-or-regenerate-from-references"
+    },
+    {
+      "id": "breakdown",
+      "title": "资产拆解与复用方案",
+      "dependsOn": ["concept"],
+      "inputs": ["confirmedConcept", "brief.json", "availableAssets"],
+      "outputs": ["asset-plan.json", "layout-draft.json"],
+      "requiredFields": ["conceptRef", "assets", "keepInBase", "separateStatefulObjects", "placementZones", "reservedConnection", "estimatesByCurrency"],
+      "exitChecks": ["every visible major element has a production route", "reuse before generation", "stateful props separate", "layout uses plot-local metres"],
+      "playerGate": "none",
+      "onFailure": "revise-plan-or-ask-about-unsupported-behaviour"
+    },
+    {
+      "id": "asset_design",
+      "title": "单件设计与建模批次确认",
+      "dependsOn": ["breakdown"],
+      "inputs": ["asset-plan.json", "confirmedConcept", "existingAssetPreviews"],
+      "outputs": ["asset-designs.json", "production-batch.json"],
+      "requiredFields": ["assetId", "route", "sourceConceptRef", "designRefs", "orderedViews", "heightMetres", "review", "modelSettings", "estimate"],
+      "exitChecks": ["new meshes have consistent front/right/back views", "single complete subject per input", "selected designs and model settings bound to batch", "unknown costs explicitly shown"],
+      "playerGate": "production_batch",
+      "onFailure": "correct-only-affected-asset-design"
+    },
+    {
+      "id": "assets",
+      "title": "生成与资产准备",
+      "dependsOn": ["asset_design"],
+      "inputs": ["confirmedProductionBatch", "selectedDesignRefs", "reusedAssetRefs"],
+      "outputs": ["asset-manifest.json", "task-ledger.json"],
+      "requiredFields": ["assetId", "sourceRefs", "localFiles", "unitScale", "upAxis", "pivot", "bounds", "lods", "colliderRecipe", "sockets", "visualReview"],
+      "exitChecks": ["durable local files downloaded", "model loads with materials", "scale/pivot/axis normalized", "stateful structures compatible", "source image hash matches model task"],
+      "playerGate": "none",
+      "onFailure": "inspect-task-before-retry-or-request-new-generation-batch"
+    },
+    {
+      "id": "layout",
+      "title": "Unity装配与玩家摆放",
+      "dependsOn": ["assets"],
+      "inputs": ["asset-manifest.json", "layout-draft.json", "terrainTemplate", "connectionAnchors"],
+      "outputs": ["layout.json", "scene-preview-images"],
+      "requiredFields": ["plotId", "terrainTemplateRef", "connectionAnchors", "instances", "interactionBindings", "environment", "sourceAssetRefs"],
+      "exitChecks": ["positions/rotations/scales recorded", "connection unobstructed", "no assumed image-to-world coordinates", "player adjustments recorded as new layout revision"],
+      "playerGate": "none",
+      "onFailure": "adjust-placement-or-replace-affected-asset"
+    },
+    {
+      "id": "validation",
+      "title": "场景与玩法验收",
+      "dependsOn": ["layout"],
+      "inputs": ["layout.json", "asset-manifest.json", "boundarySnapshot"],
+      "outputs": ["validation.json", "walkthrough-previews"],
+      "requiredFields": ["layoutRef", "sceneHash", "checks", "runtimeErrors", "screenshots", "saveReloadResult", "limitations"],
+      "exitChecks": ["spawn/connection/interaction paths complete", "corridor and headroom targets measured", "physical collision and interactions checked", "save and reload preserve layout/state", "visual review in multiple views and day/night"],
+      "playerGate": "none",
+      "onFailure": "return-to-layout-or-affected-asset;never-publish-failed-layout"
+    },
+    {
+      "id": "finalize",
+      "title": "确认落地与创作记录",
+      "dependsOn": ["validation"],
+      "inputs": ["passedValidation", "layout.json", "asset-manifest.json", "playerFinalDecision"],
+      "outputs": ["scene-release.json", "creation-history.json"],
+      "requiredFields": ["plotId", "releaseId", "layoutRef", "validationRef", "assetRefs", "playerApproval", "previousReleaseRef", "historyRef"],
+      "exitChecks": ["player approves exact validated layout", "all refs pinned to versions/hashes", "previous published home remains available until commit", "publication is atomic and reversible"],
+      "playerGate": "final_layout",
+      "onFailure": "keep-draft-and-previous-release"
+    }
+  ],
+  "artifactRef": {
+    "required": ["id", "version", "path", "sha256"],
+    "pathPolicy": "workspace-relative or durable managed asset key; no expiring URL",
+    "versionPolicy": "immutable; edits create a new version with parentRefs"
+  },
+  "assetRoutes": ["reuse", "material_variant", "generated_mesh", "generated_texture", "procedural"],
+  "productionDefaults": {
+    "image": { "model": "gpt-image-2", "outputsPerRequest": 1, "maxInternalCorrections": 2, "limitEditableInAdmin": true },
+    "mesh": { "provider": "aholo-lux3d", "model": "G1", "faceCount": 300000, "enablePbr": true, "format": "glb", "viewOrder": ["front", "right", "back"] },
+    "note": "Defaults mirror existing production records; not live API verification or a network executor."
+  },
+  "reviewPolicy": {
+    "scope": ["concept", "asset_design"],
+    "inputs": ["brief", "boundarySnapshot", "selectedCandidate", "originalOrderedReferences", "previousReview", "remainingCorrectionCount"],
+    "decisionFields": ["pass", "issues", "action", "selectedInputRefs", "revisionPrompt"],
+    "actions": ["accept", "edit_candidate", "regenerate_from_originals", "ask_player"],
+    "onLimit": "preserve-versions-and-ask-player;do-not-label-unpassed-candidate-final",
+    "playerUi": "show progress and usable candidates; internal reasoning stays in admin records"
+  },
+  "gates": [
+    { "id": "concept", "binds": ["briefRef", "conceptRef", "boundaryRef"], "authority": "player" },
+    { "id": "production_batch", "binds": ["briefRef", "conceptRef", "assetPlanRef", "designRefs", "modelSettings", "estimate", "budgetCaps"], "authority": "player" },
+    { "id": "final_layout", "binds": ["layoutRef", "assetManifestRef", "validationRef"], "authority": "player" }
+  ],
+  "costPolicy": {
+    "budgetRequiredBeforeBillableWork": true,
+    "currenciesKeptSeparate": ["USD", "CNY", "AHOLO_CREDITS"],
+    "unknownCostIsZero": false,
+    "imageCallsWithinPlayerApprovedBudget": true,
+    "meshCallsRequireConfirmedBatch": true,
+    "overBudget": "pause-and-ask-player",
+    "estimationUnavailable": "ask-player-for-disclosed-unknown-cost-authorization",
+    "duplicateSubmissionPolicy": "persist-operation-intent-before-POST;unknown-result-reconcile-before-any-new-POST"
+  },
+  "taskStates": ["planned", "submitting", "submitted", "running", "downloaded", "verified", "failed", "submission_unknown", "cancel_requested", "cancelled"],
+  "recovery": {
+    "submission_unknown": "query/reconcile;never-automatically-replay-paid-POST",
+    "cancel_requested": "stop-new-submissions;already-submitted-tasks-may-still-charge;collect-results",
+    "download_failed": "redownload-known-task-result-before-regenerating",
+    "upstream_change": "mark-dependent-artifacts-stale;keep-files-and-invalidate-bound-confirmations",
+    "resume": "reuse-verified-results-only-if-source-and-parameter-hashes-match",
+    "partial_batch_failure": "keep-good-assets;retry-only-affected-operation-under-valid-budget"
+  },
+  "validationMode": "contract completeness + retrospective source replay; not runtime Agent execution"
+}

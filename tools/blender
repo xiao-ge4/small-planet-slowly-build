@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+blender='/Applications/Blender.app/Contents/MacOS/Blender'
+if [ ! -x "$blender" ]; then
+  echo 'Blender is not installed at /Applications/Blender.app' >&2
+  exit 1
+fi
+exec "$blender" "$@"

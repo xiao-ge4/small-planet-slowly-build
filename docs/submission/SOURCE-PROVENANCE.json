@@ -1,0 +1,12 @@
+{
+  "source": "Verified clean SmallPlanetSubmission.zip",
+  "sourceSha256": "81cee48ff10c3981e20b6d486b7f9719fbdf6f7eb7a2743ad030d9d957d07fce",
+  "originalWebGLBuildId": "3d39fac9727549be882858ac4c1a9431",
+  "privateDataIncluded": false,
+  "compiledWebGLDistributedInReleases": true,
+  "authoringAssetsResized": false,
+  "modelGeometryChanged": false,
+  "originalCleanSourceFileCount": 8567,
+  "largeSourceAssetsInReleases": true,
+  "sourceAssetRestoreTool": "tools/fetch_release_build.py"
+}

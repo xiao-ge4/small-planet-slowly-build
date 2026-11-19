@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "seed": 4617,
+  "assets": [
+    {
+      "id": "garden-understory-cluster",
+      "name": "晨露阔叶灌木丛",
+      "size": {
+        "x": 1.5485270023345947,
+        "y": 0.48450767993927,
+        "z": 1.646519422531128
+      },
+      "center": {
+        "x": 0,
+        "y": 0.242253839969635,
+        "z": 0
+      },
+      "triangles": 51000,
+      "model": "lod0.glb",
+      "preview": "preview.png"
+    },
+    {
+      "id": "garden-flower-cluster",
+      "name": "晨露混色花丛",
+      "size": {
+        "x": 1.4325549602508545,
+        "y": 0.48035305738449097,
+        "z": 1.4365136623382568
+      },
+      "center": {
+        "x": 0,
+        "y": 0.24017652869224548,
+        "z": 0
+      },
+      "triangles": 48332,
+      "model": "lod0.glb",
+      "preview": "preview.png"
+    },
+    {
+      "id": "garden-rock-cluster",
+      "name": "苔石与地被组合",
+      "size": {
+        "x": 1.6062219142913818,
+        "y": 0.5310671925544739,
+        "z": 1.4722347259521484
+      },
+      "center": {
+        "x": 0,
+        "y": 0.26553359627723694,
+        "z": 0
+      },
+      "triangles": 8506,
+      "model": "lod0.glb",
+      "preview": "preview.png"
+    },
+    {
+      "id": "garden-grass-tuft",
+      "name": "细叶草簇",
+      "size": {
+        "x": 0.8959711194038391,
+        "y": 0.16725026071071625,
+        "z": 0.9021431803703308
+      },
+      "center": {
+        "x": 0,
+        "y": 0.08362513035535812,
+        "z": 0
+      },
+      "triangles": 27540,
+      "model": "lod0.glb",
+      "preview": "preview.png"
+    }
+  ]
+}

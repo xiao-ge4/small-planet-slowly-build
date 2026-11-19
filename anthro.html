@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>物件精灵 · 拟人形象工作台</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="vendor/model-viewer.min.js"></script>
+  <script src="anthro.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="返回原物件工作台"><span class="brand-mark">Q</span>物件精灵<span class="brand-sub">OBJECT STUDIO</span></a><div class="top-actions"><a class="ghost-btn settings-nav" href="/settings.html">提示词配置</a><span id="modeBadge" class="mode-badge">连接中</span><span id="saveStatus" class="save-state">正在读取…</span></div></header>
+  <main class="shell anthro-shell">
+    <section class="intro-row"><div><p class="eyebrow">02 / 拟人形象</p><h1>让熟悉的物件长成自己的小精灵。</h1><p class="lede">先确定把手的转化方式，再打磨一张适合后续绑定的幼年角色设计图。</p></div><div class="phase-track"><a class="phase" href="/"><b>1</b>原物件</a><i></i><span class="phase active"><b>2</b>拟人形象</span><i></i><span class="phase"><b>3</b>属性与招式</span></div></section>
+    <div id="notice" class="notice hidden" role="alert"></div>
+    <section id="locked" class="handoff hidden"><div><span class="step-label">PHASE LOCKED</span><h2>先完成原物件 3D 定稿。</h2><p>拟人形象必须建立在已经确认的原物件模型和对应设计图上。</p></div><a class="handoff-tag" href="/">返回原物件阶段 →</a></section>
+    <section id="workspace" class="workspace hidden">
+      <aside class="left-panel anthro-controls">
+        <div class="panel-heading"><div><span class="step-label">SOURCE OBJECT</span><h2 id="sourceTitle">玻璃杯</h2></div></div>
+        <div class="source-mini"><img id="sourceImage" alt="原物件设计图"><div><strong id="sourceMeta"></strong><p>材质、颜色、杯沿和黄色把手会作为角色身份基础。</p></div></div>
+        <div class="prompt-block"><label for="concept">把手如何成为角色特征</label><select id="concept"><option value="handle-ear">方案 A · 变成一对耳朵</option><option value="handle-tail">方案 B · 变成尾巴</option><option value="handle-equipment">方案 C · 变成标志性装备</option><option value="custom">自定义转化方式</option></select><p class="subtle">首版只生成幼年状态；成熟和最终状态的方向会保留在版本记录中。</p></div>
+        <label class="prompt-block" for="idea">拟人设计要求<textarea id="idea" rows="6" maxlength="1500" placeholder="例如：保留透明玻璃质感和黄色把手，把手变成耳朵；加入短小的手脚和顽皮表情，整体像可爱的幼年水精灵。"></textarea></label>
+        <div class="prompt-block anthro-reference-block"><label for="styleReferenceInput">精灵风格参考图 <small>可选，最多 2 张</small></label><input id="styleReferenceInput" type="file" accept="image/jpeg,image/png,image/webp" multiple><div id="auxiliaryList" class="auxiliary-summary"></div><p class="subtle">建议上传你认可的老版端游精灵截图或自制风格稿；它只作为画风参考，不替换玻璃杯身份。<span id="auxiliaryCount">0 / 2</span></p></div>
+        <div class="art-direction"><span class="step-label">BINDING FRIENDLY</span><strong>四分之三 · 幼年 · 单个完整角色</strong><p>提示词会要求四肢、尾巴或耳朵的根部和末端清楚可见，减少严重遮挡，为后续骨骼绑定留出空间。</p></div>
+        <button id="generate" class="primary-btn">✦ 生成幼年拟人设计</button><p id="cost" class="cost-line"></p>
+        <a class="text-link" href="/">返回修改原物件 ↗</a>
+      </aside>
+      <section class="preview-panel">
+        <div class="preview-toolbar"><div><span class="step-label">CHARACTER WORKBENCH</span><h2>幼年精灵设计</h2></div><div class="toolbar-actions"><button id="compare" class="ghost-btn" disabled>版本对比</button><button id="confirm" class="ghost-btn dark" disabled>定稿拟人模型</button></div></div>
+        <div id="taskBar" class="task-bar hidden"><span class="spinner small"></span><div><strong id="taskTitle"></strong><p id="taskDetail"></p></div></div>
+        <div class="view-tabs"><button id="designTab" class="tab active">设计图</button><button id="modelTab" class="tab">3D 模型</button><span id="versionLabel"></span></div>
+        <div class="preview-stage"><div class="stage-grid"></div><div id="empty" class="empty-state"><div class="empty-orbit"></div><strong>先让物件成为幼年精灵</strong><span>设计图会在这里生成。你确认后，才会开始 3D 建模。</span></div><img id="design" class="design-image hidden" alt="幼年拟人角色设计图"><model-viewer id="viewer" class="hidden" camera-controls environment-image="neutral" shadow-intensity="0.5" alt="幼年拟人角色 3D 模型"></model-viewer><span id="badge" class="stage-badge hidden"></span></div>
+        <div id="approval" class="design-approval hidden"><div><strong id="approvalTitle">满意这张幼年角色设计了吗？</strong><p id="approvalNote">继续修改，或确认这张完整角色设计图生成 3D。</p></div><div class="approval-buttons"><button id="continue" class="ghost-btn">继续修改</button><button id="makeModel" class="primary-btn">用这张图生成 3D</button></div></div>
+        <div id="revision" class="revision-box hidden"><div class="revision-heading"><label for="revisionText">围绕当前拟人设计继续打磨</label></div><div class="revision-row"><input id="revisionText" maxlength="1500" placeholder="例如：把耳朵改小，露出完整杯沿，双腿分开一些"><button id="revise">生成新版本 ↗</button></div><p class="subtle">旧版会保留；每次修改以当前选中的设计图为主体基础。</p></div>
+        <div class="version-strip"><div class="version-heading"><span>拟人创作历程</span><small id="versionCount">0 个版本</small></div><div id="versions" class="version-list"></div></div>
+        <div id="modelTools" class="model-tools hidden"><div class="view-controls"><button data-orbit="0deg 75deg auto">正面</button><button data-orbit="45deg 65deg auto">四分之三</button><button data-orbit="90deg 75deg auto">侧面</button></div><a id="download" class="text-link" download="anthro.glb">下载 GLB ↓</a></div>
+        <div id="handoffDone" class="handoff hidden"><div><span class="step-label">ANTHRO MODEL CONFIRMED</span><h2>幼年精灵已经成形。</h2><p id="doneText"></p></div><span class="handoff-tag">可进入后续属性与招式阶段</span></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "createdUtc": "2026-11-18T16:39:00.0589380Z",
+    "method": "Front upper-body renders of local prefabs; no generated imagery",
+    "characters": [
+        {
+            "character": "player",
+            "prefab": "Assets/DawnGarden/Prefabs/Pet.prefab",
+            "output": "Assets/SmallWorldV1/Resources/CharacterPortraits/player.png",
+            "status": "rendered from prefab"
+        },
+        {
+            "character": "ajin",
+            "prefab": "Assets/SmallWorldV1/Resources/Homecoming/Ajin.prefab",
+            "output": "Assets/SmallWorldV1/Resources/CharacterPortraits/ajin.png",
+            "status": "rendered from prefab"
+        },
+        {
+            "character": "lumi",
+            "prefab": "Assets/SmallWorldV1/Resources/Neighbors/Lumi.prefab",
+            "output": "Assets/SmallWorldV1/Resources/CharacterPortraits/lumi.png",
+            "status": "rendered from prefab"
+        },
+        {
+            "character": "lanlan",
+            "prefab": "Assets/SmallWorldV1/Resources/Neighbors/Lanlan.prefab",
+            "output": "Assets/SmallWorldV1/Resources/CharacterPortraits/lanlan.png",
+            "status": "rendered from prefab"
+        },
+        {
+            "character": "guardian",
+            "prefab": "Assets/SmallWorldV1/Resources/Guardian/MossstoneGuardian.prefab",
+            "output": "Assets/SmallWorldV1/Resources/CharacterPortraits/guardian.png",
+            "status": "rendered from prefab"
+        }
+    ]
+}

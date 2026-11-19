@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>物件精灵 · 设计工作台</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="vendor/model-viewer.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="物件精灵工作台"><span class="brand-mark">Q</span>物件精灵<span class="brand-sub">OBJECT STUDIO</span></a>
+    <div class="top-actions"><a id="promptSettingsBtn" class="ghost-btn settings-nav" href="/settings.html">提示词配置</a><span id="modeBadge" class="mode-badge">连接中</span><span class="save-state" id="saveStatus" role="status">正在读取草稿…</span></div>
+  </header>
+  <main class="shell">
+    <section class="intro-row">
+      <div><p class="eyebrow">01 / 原物件设计</p><h1>熟悉的物件，奇幻的新模样。</h1><p class="lede">先打磨一张满意的设计图，再决定是否让它成为 3D。</p></div>
+      <div class="phase-track"><span class="phase active"><b>1</b>设计原物件</span><i></i><a id="anthroPhaseLink" class="phase" href="/anthro.html"><b>2</b>拟人形象</a><i></i><span class="phase"><b>3</b>属性与招式</span></div>
+    </section>
+    <section class="project-bar">
+      <div class="project-selector"><label for="projectSelect">我的物件</label><select id="projectSelect" aria-label="切换项目"></select><button id="newProject" class="text-btn">＋ 新建</button></div>
+      <label class="project-name-label">名称<input id="projectTitle" maxlength="80" aria-label="项目名称" placeholder="给它起个名字"></label>
+    </section>
+    <div id="notice" class="notice hidden" role="alert"></div>
+    <section class="workspace">
+      <aside class="left-panel">
+        <div class="panel-heading"><div><span class="step-label">YOUR IDEA</span><h2>写出你的想法</h2></div></div>
+        <div class="prompt-block idea-block"><label class="sr-only" for="prompt">写出你的想法</label><textarea id="prompt" maxlength="1500" rows="5" placeholder="一只圆润的薄荷色玻璃杯，保留黄色杯柄与浅浅的竖纹，带一点魔法感……"></textarea><p class="subtle">只写文字也可以。有参考图时，告诉我每张图的用途。</p></div>
+        <div class="reference-heading"><h3>参考图片 <span>可选</span></h3><span id="imageCount" class="count">0 / 3</span></div>
+        <label class="dropzone" id="dropzone" for="fileInput"><input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp" multiple><span class="upload-icon">＋</span><strong>拖入照片，或点击选择</strong><small>最多 3 张 · JPG / PNG / WebP · 每张 ≤ 10 MB</small></label>
+        <div id="thumbGrid" class="reference-list"></div>
+        <p class="input-note" id="referenceHint">全部已选参考图按编号参与本轮设计。请标明物件结构、角度或风格等用途。</p>
+        <div class="art-direction"><span class="step-label">ART DIRECTION</span><strong>原物件风格化 · 白底单主体</strong><p>风格与画面要求以「提示词配置」中保存的规则为准。可预览每一步的实际指令。</p><small>这一阶段保留物件形态，拟人化留待下一步。</small></div>
+        <button id="generateBtn" class="primary-btn" disabled>✦ 生成设计图</button>
+        <p id="generationCost" class="cost-line">Qwen · 每次生成 1 张</p>
+        <p class="api-hint">图片生成后，由你选择继续修改或生成 3D。历史版本会自动保存。</p>
+        <div class="reference-footer"><span class="tiny-dot"></span><span id="connectionHint">连接本地工作台</span></div>
+      </aside>
+      <section class="preview-panel">
+        <div class="preview-toolbar"><div><span class="step-label">DESIGN WORKBENCH</span><h2>形象工作台</h2></div><div class="toolbar-actions"><button id="restoreBtn" class="ghost-btn" disabled>恢复此版本</button><button id="compareBtn" class="ghost-btn" disabled>版本对比</button><button id="confirmBtn" class="ghost-btn dark" disabled>定稿模型</button></div></div>
+        <div id="taskBar" class="task-bar hidden" role="status"><span class="spinner small"></span><div><strong id="taskTitle"></strong><p id="taskDetail"></p></div><button id="retryBtn" class="text-btn hidden">恢复查询</button></div>
+        <div class="view-tabs"><button id="designTab" class="tab active">设计图</button><button id="modelTab" class="tab">3D 模型</button><span id="versionLabel"></span></div>
+        <div id="previewStage" class="preview-stage">
+          <div class="stage-grid"></div>
+          <div id="emptyState" class="empty-state"><div class="empty-orbit"></div><strong id="emptyTitle">先让一个想法成形</strong><span id="emptyDetail">写下灵感，或上传一件喜欢的物品。这里会出现它的第一张设计图。</span></div>
+          <model-viewer id="viewer" class="hidden" loading="eager" camera-controls environment-image="neutral" shadow-intensity="0.5" exposure="1" alt="当前设计图对应的 3D 模型"></model-viewer>
+          <button id="designZoomTarget" class="design-zoom-target hidden" aria-label="放大查看当前设计图"><img id="designImage" class="design-image" alt="当前版本的单主体设计图"><span class="zoom-hint">↗ 放大查看</span></button>
+          <span id="assetBadge" class="stage-badge hidden"></span>
+        </div>
+        <div id="modelTools" class="model-tools hidden"><div class="view-controls"><button data-orbit="0deg 75deg auto">正面</button><button data-orbit="90deg 75deg auto">侧面</button><button data-orbit="180deg 75deg auto">背面</button><button data-orbit="45deg 65deg auto">四分之三</button></div><div class="view-controls"><button id="resetView" aria-label="重置视角">↺</button><button id="fourViewsBtn">四视图</button><a id="downloadModel" class="hidden" download="object.glb">下载 GLB ↓</a></div></div>
+        <div class="asset-info"><p id="modelHint" class="model-hint"></p><a id="downloadDesign" class="text-link hidden" download="design.png">下载设计图 ↓</a></div>
+        <div id="modelOrigin" class="model-origin hidden"><span id="modelOriginText"></span><button id="showSourceDesign" class="text-btn">查看来源设计图 ↗</button></div>
+        <div id="designApproval" class="design-approval hidden"><div><strong id="designActionTitle">满意这张设计了吗？</strong><p id="designActionNote">先确认图中只有一个完整主体。继续打磨，或将这张图生成 3D。</p></div><div class="approval-buttons"><button id="continueBtn" class="ghost-btn">继续修改</button><button id="approveDesignBtn" class="primary-btn">用这张图生成 3D</button></div><p id="modelCost" class="cost-line"></p></div>
+        <div id="revisionBox" class="revision-box hidden"><div class="revision-heading"><label for="revisionPrompt">围绕当前设计，继续打磨</label><button id="auxiliaryBtn" class="text-btn">＋ 辅助参考 <span id="auxiliaryCount">0 / 2</span></button></div><p id="revisionBase" class="subtle"></p><div id="auxiliarySummary" class="auxiliary-summary"></div><div class="revision-row"><input id="revisionPrompt" maxlength="1500" placeholder="例如：只把杯柄改为天蓝色，保留杯身造型与配色"><button id="reviseBtn" disabled>生成新设计图 ↗</button></div><p id="revisionCost" class="cost-line"></p><p class="subtle">图 1 固定为当前选中的设计图；最多额外选择 2 张辅助图。新版本会保留旧版。</p></div>
+        <div class="version-strip"><div class="version-heading"><span>创作历程</span><small id="versionCount">0 个版本</small></div><div id="versionList" class="version-list"></div></div>
+        <details id="requestDetails" class="record-panel hidden"><summary>生成记录与实际指令</summary><div id="versionMeta" class="record-meta"></div><pre id="actualPrompt"></pre></details>
+        <div class="project-cost"><span>本项目成功生成估算</span><strong id="projectQwenCost">Qwen ¥0.00</strong><strong id="projectAholoCost">Aholo 0 积分</strong><small id="costFootnote">人民币与积分分开计价；按公开单价估算，实际扣费以平台账单为准。</small></div>
+      </section>
+    </section>
+    <section id="handoff" class="handoff hidden"><div><span class="step-label">MODEL CONFIRMED</span><h2>这个版本，留住了你的想法。</h2><p id="handoffText"></p></div><a id="handoffNext" class="handoff-tag" href="/anthro.html">进入拟人形象 →</a></section>
+  </main>
+  <dialog id="compareDialog"><div class="dialog-head"><div><p class="eyebrow">VERSION COMPARISON</p><h2>看看这次改变</h2></div><button class="close-btn" data-close="compareDialog" aria-label="关闭对比">×</button></div><div class="compare-mode"><button id="compareDesignMode" class="tab active">设计图对比</button><button id="compareModelMode" class="tab">模型对比</button></div><div class="compare-selectors"><label>对比版本<select id="compareLeft"></select></label><label>当前版本<select id="compareRight"></select></label></div><div class="comparison-grid"><div><model-viewer id="compareViewerLeft" loading="eager" camera-controls environment-image="neutral" alt="左侧对比模型"></model-viewer><img id="compareImageLeft" class="hidden" alt="左侧设计图"></div><div><model-viewer id="compareViewerRight" loading="eager" camera-controls environment-image="neutral" alt="右侧对比模型"></model-viewer><img id="compareImageRight" class="hidden" alt="右侧设计图"></div></div><p class="subtle">比较和恢复历史版本不会重新生成，也不会产生费用。</p></dialog>
+  <dialog id="zoomDialog" class="zoom-dialog"><div class="dialog-head"><div><p class="eyebrow">DESIGN DETAIL</p><h2 id="zoomTitle">设计图细节</h2></div><div class="zoom-actions"><button data-zoom="1" class="ghost-btn">适应窗口</button><button data-zoom="1.5" class="ghost-btn">150%</button><button data-zoom="2" class="ghost-btn">200%</button><button class="close-btn" data-close="zoomDialog" aria-label="关闭放大图">×</button></div></div><div class="zoom-scroll"><img id="zoomImage" alt="放大后的当前设计图"></div></dialog>
+  <dialog id="referencesDialog"><div class="dialog-head"><div><p class="eyebrow">EXPLICIT REFERENCES</p><h2>选择辅助参考</h2></div><button class="close-btn" data-close="referencesDialog" aria-label="完成参考选择">×</button></div><p class="subtle">当前设计图固定作为图 1。这里最多选择 2 张，并说明用途；未选中的历史照片不会参与修改。</p><label class="aux-upload">＋ 上传辅助图<input id="auxiliaryInput" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><div id="referencePicker" class="reference-picker"></div><button id="doneReferences" class="primary-btn">完成选择</button></dialog>
+  <dialog id="fourViewsDialog"><div class="dialog-head"><div><p class="eyebrow">MODEL VIEWS</p><h2>同一个模型，四个视角</h2></div><button class="close-btn" data-close="fourViewsDialog" aria-label="关闭四视图">×</button></div><div id="fourViewsGrid" class="four-views-grid"></div><p class="subtle">四视图仅用于展示，由当前模型渲染；生成模型始终使用你选中的单主体设计图。</p></dialog>
+</body>
+</html>

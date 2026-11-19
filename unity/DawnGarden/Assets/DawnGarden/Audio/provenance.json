@@ -1,0 +1,26 @@
+{
+  "title": "晨露与月光",
+  "composition": "Original deterministic synthesis; no third-party recordings or samples.",
+  "bpm": 72,
+  "bars": 32,
+  "tracks": [
+    {
+      "file": "MorningDew.wav",
+      "durationSeconds": 106.66666666666667,
+      "sampleRate": 22050,
+      "channels": 2,
+      "peak": 0.68,
+      "rms": 0.15409032186919505,
+      "loopBoundaryDelta": 0.0031631136122571013
+    },
+    {
+      "file": "MoonlitDew.wav",
+      "durationSeconds": 106.66666666666667,
+      "sampleRate": 22050,
+      "channels": 2,
+      "peak": 0.68,
+      "rms": 0.13355401181565135,
+      "loopBoundaryDelta": 0.00336696180187979
+    }
+  ]
+}

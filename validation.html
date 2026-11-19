@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>真实生成验证 · 物件精灵</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="vendor/model-viewer.min.js"></script>
+  <style>
+    .validation-grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    .validation-card{border:1px solid var(--line);background:white;padding:24px;min-width:0}
+    .source-photo{width:100%;border:1px solid var(--line);margin:16px 0}
+    .validation-card h2{font-size:18px;margin:0 0 10px}
+    .validation-card p{font-size:13px;color:var(--muted);line-height:1.8}
+    model-viewer{width:100%;height:540px;background:#eef2ef;--poster-color:transparent}
+    .result-controls{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+    .result-controls button{background:#fff;border:1px solid var(--line);padding:9px 15px;cursor:pointer}
+    .task-list{margin-top:20px;font-size:12px;color:var(--muted);line-height:1.8}
+    .task-list a{color:var(--green)}
+    #imageResults img{max-width:100%;display:block;margin-top:14px;border:1px solid var(--line)}
+    @media(max-width:800px){.validation-grid{grid-template-columns:1fr}model-viewer{height:420px}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-mark">Q</span>物件精灵</div><div class="topbar-meta">第一阶段 · 真实资产验证</div></header>
+  <main class="shell">
+    <div class="intro-row"><div><p class="eyebrow">LIVE VALIDATION / LUX3D</p><h1>照片，正在成为 3D 物件</h1><p class="lede">此页面只展示本次接口实测结果，供检查形状、材质与修改效果。</p></div></div>
+    <div class="validation-grid">
+      <aside class="validation-card"><span class="step-label">SOURCE</span><h2>原始照片</h2><img class="source-photo" src="test-inputs/test.jpeg" alt="带黄色杯柄的透明玻璃杯"><p>检查重点：杯身轮廓、黄色杯柄、竖向纹理，以及透明材质的还原情况。</p><div id="taskList" class="task-list">正在读取任务…</div></aside>
+      <section class="validation-card">
+        <span class="step-label">GENERATED ASSET</span><h2 id="modelTitle">等待真实模型</h2>
+        <p id="modelStatus" role="status">任务成功并完成下载后，将自动加载本地 GLB。</p>
+        <model-viewer id="viewer" loading="eager" camera-controls shadow-intensity="0.5" exposure="1" environment-image="neutral" alt="Lux3D 实际生成的物件 3D 模型"></model-viewer>
+        <div class="result-controls"><button data-orbit="0deg 75deg auto">正面</button><button data-orbit="90deg 75deg auto">侧面</button><button data-orbit="180deg 75deg auto">背面</button><button data-orbit="45deg 65deg auto">四分之三</button><button id="rotate">自动旋转</button></div>
+        <div id="modelChoices" class="result-controls"></div>
+        <div id="imageResults"></div>
+      </section>
+    </div>
+  </main>
+  <script src="validation.js"></script>
+</body>
+</html>

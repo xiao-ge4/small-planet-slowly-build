@@ -1,0 +1,17 @@
+{
+  "buildId": "3d39fac9727549be882858ac4c1a9431",
+  "sourceBuildId": "1f00477ea310e593a95826fee878e194e4bf5ab617f18d39b00bf437cd7497c8",
+  "createdAt": "2026-11-19T07:04:36.6095020Z",
+  "appPath": "artifacts/submission/WebGL",
+  "success": true,
+  "recordingOnly": false,
+  "platform": "WebGL",
+  "apiMode": "same-origin",
+  "scenes": [
+    "Assets/SmallWorldV1/SmallWorldBoot.unity",
+    "Assets/SmallWorldV1/DawnHomeV1.unity",
+    "Assets/SmallWorldV1/EmberHomeV1.unity",
+    "Assets/SmallWorldV1/StarDewHomeV2.unity",
+    "Assets/SmallWorldV1/WindCourtHomeV2.unity"
+  ]
+}

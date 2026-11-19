@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "outdoor-connected-plot-v1",
+  "status": "scope-confirmed",
+  "units": "metres",
+  "coordinates": "Unity Y-up; plot-local X/Z; ground near Y=0",
+  "scope": "One connected outdoor plot; theme, decoration and existing interactions",
+  "productChoices": {
+    "newPlotProfile": "starter",
+    "themeContinuity": "independent-no-transition-required",
+    "adjacency": "directly-adjacent-to-existing-land-with-passable-connection",
+    "decisionSource": "User confirmed starter-sized new plots and unrestricted themes without required visual transition"
+  },
+  "plotProfiles": [
+    { "id": "starter", "halfX": 6.15, "halfZ": 5.15, "description": "Existing starter home; irregular ellipse, nominal 12.3 x 10.3 m" },
+    { "id": "existing-extension", "halfX": 3.25, "halfZ": 2.75, "description": "Existing first extension; irregular ellipse, nominal 6.5 x 5.5 m" }
+  ],
+  "terrain": {
+    "owner": "game",
+    "placement": "starter-sized template placed directly next to existing land; connection anchors supplied by game",
+    "allowAgentToChangeBoundary": false,
+    "allowAgentToChangeConnection": false,
+    "requireVisualThemeTransition": false,
+    "walkableLayer": 8,
+    "solidLayer": 9,
+    "navMeshCollectPhysicsColliders": true,
+    "waterWalkable": false,
+    "maxAuthoredStep": 0.25,
+    "maxAuthoredSlope": 40
+  },
+  "actor": {
+    "reuseCurrentPetAndRig": true,
+    "radius": 0.24,
+    "height": 1.7,
+    "stepOffset": 0.25,
+    "slopeLimit": 40,
+    "locomotionClips": ["Idle", "Jog"],
+    "interactionClips": ["Watering", "Chest"]
+  },
+  "navigation": {
+    "agentTypeId": 0,
+    "bakedRadius": 0.5,
+    "bakedHeight": 2.0,
+    "minimumClearCorridorWidth": 1.4,
+    "minimumOverheadClearance": 2.2,
+    "sampleTolerance": 0.3,
+    "reserveConnectionCorridor": true,
+    "checkFullPathsAfterAssembly": true,
+    "clearanceThresholdStatus": "design-target-not-yet-measured-in-existing-scenes"
+  },
+  "interactions": {
+    "allowedKinds": ["Water", "Chest"],
+    "requiredOnEveryNewPlot": false,
+    "activationDistance": 1.8,
+    "requireSeparateStatefulObjects": true,
+    "requireStableIdWithinPlot": true,
+    "requireReachableApproach": true,
+    "requireSavedState": true,
+    "water": "Reuse watering can, grip/nozzle and Watering clip; plant growth",
+    "chest": "Reuse hinged chest and Chest clip; configured reward",
+    "excludedForNow": ["new skeletal interactions", "swimming", "jumping traversal", "interiors", "multiplayer state synchronization"]
+  },
+  "art": {
+    "editable": ["palette", "ground material", "trees", "rocks", "static buildings", "flowers", "approved ambient effects"],
+    "staticDecorMayShareBase": true,
+    "separateObjectsIf": ["interactive", "changes state", "player can move it", "intended for independent reuse"],
+    "solidPropsNeedSimpleColliders": true,
+    "visualGeometryDoesNotDefineWalkability": true,
+    "noWholeSceneImageTo3DForWalkableTerrain": true,
+    "noAutomaticNewGlowOrLightingEffects": true
+  },
+  "ownership": {
+    "agent": ["propose theme", "propose asset selection and positions inside constraints", "iterate visuals"],
+    "player": ["choose theme", "confirm concept", "approve final layout"],
+    "game": ["terrain boundary", "connection anchors", "movement and collision", "interaction implementation", "save and reward rules"]
+  },
+  "acceptance": [
+    "spawn is on navigation",
+    "all interaction approaches are reachable from spawn",
+    "sea and pond or spring are excluded from navigation",
+    "locked land is unreachable",
+    "unlocked land is reachable through connection",
+    "current pet and four existing clips are reusable",
+    "stable IDs and source homes are distinct",
+    "stateful props are separate from terrain",
+    "new layout meets corridor and headroom targets before publication"
+  ],
+  "implementationNotes": [
+    "This contract defines the first creation scope; the Agent and generic assembly are later steps.",
+    "Existing DawnGardenGame expects one Water and one Chest; optional interactions on new plots require later runtime generalization.",
+    "Existing expansion runtime supports one small fixed east-side extension. The confirmed new starter-sized plots require later geometry, placement, navigation and save changes; current samples validate shared movement/interaction rules only.",
+    "Current NavMesh climb/slope are more permissive than CharacterController. New terrain must obey maxAuthoredStep/maxAuthoredSlope until the bake profile is aligned."
+  ]
+}

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>捡个星球慢慢造 · 进入家园</title>
+<style>
+:root{font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#243e31;background:#edf0e3}*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}button,a{touch-action:manipulation}button:focus-visible,a:focus-visible{outline:3px solid #8ca678;outline-offset:4px}.page{height:100vh;height:100dvh;min-height:250px;padding:clamp(12px,2.4vw,28px) clamp(14px,3.2vw,48px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:16px;background:radial-gradient(ellipse at 10% 5%,#faf9ed,transparent 60%),#edf0e3}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1600px;width:100%;margin:auto}.brand{display:flex;align-items:center;gap:12px;min-width:0}.mark{display:grid;place-items:center;width:38px;height:38px;flex:none;border:1px solid #acbb9e;border-radius:50%;background:#e3e9d7}.mark svg{width:25px;height:25px}.brand h1{font-size:18px;letter-spacing:.07em;font-weight:550;line-height:1.4;margin:0}.brand p{font-size:11px;letter-spacing:.13em;color:#728369;margin:3px 0 0}.actions{display:flex;align-items:center;gap:8px;flex:none}.action{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:7px 13px;color:#35573c;background:#f9f8edcc;border:1px solid #b9c6ac;border-radius:9px;text-decoration:none;cursor:pointer;transition:background .15s,transform .15s}.action:hover{background:#fffdf3;transform:translateY(-1px)}.action:disabled{opacity:.45;cursor:default;transform:none}.action svg{width:15px;height:15px;flex:none}.stage-area{display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;width:100%;overflow:hidden}.stage{position:relative;width:100%;max-width:1600px;aspect-ratio:16/9;flex:none;overflow:hidden;border-radius:14px;background:#172c23;box-shadow:0 18px 60px #2d443322,0 0 0 1px #566d3e26}#unity-canvas{display:block;width:100%;height:100%;background:#172c23;outline:none;touch-action:none}.loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#faf8e9,#e7eddb);color:#35573c}.loading[hidden]{display:none}.planet{width:76px;height:76px;margin-bottom:18px}.loading h2{font-size:clamp(19px,2.4vw,28px);font-weight:500;letter-spacing:.1em;margin:0 0 8px}.loading-note{max-width:420px;margin:0;color:#6a7e5f;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}.progress-group{width:min(300px,70%);margin-top:25px}.progress-track{width:100%;height:5px;border-radius:4px;background:#cdd9bd;overflow:hidden}.progress-fill{width:0%;height:100%;background:#4a7247;border-radius:4px;transition:width .15s linear}.progress-info{display:flex;justify-content:space-between;gap:12px;margin-top:9px;color:#6b7e61;font-size:11px}.loading.error .planet{opacity:.6}.loading.error .progress-group{display:none}.retry{margin-top:20px;background:#35573c;border-color:#35573c;color:#fff9df}.retry[hidden]{display:none}.footbar{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1600px;width:100%;margin:auto;color:#6a7b61;font-size:12px}.footbar p{margin:0}.run-status{display:flex;align-items:center;gap:6px;flex:none}.status-dot{width:6px;height:6px;border-radius:50%;background:#91a77c}.run-status[data-state="error"] .status-dot{background:#a96a44}.run-status[data-state="running"] .status-dot{background:#4d7947}.stage:fullscreen,.stage:-webkit-full-screen{width:100vw!important;height:100vh!important;max-width:none;aspect-ratio:auto;border-radius:0;display:flex;align-items:center;justify-content:center;background:#14241b}.stage:fullscreen #unity-canvas,.stage:-webkit-full-screen #unity-canvas{width:min(100vw,calc(100vh * 16 / 9));height:min(100vh,calc(100vw * 9 / 16));flex:none}.stage:fullscreen .loading,.stage:-webkit-full-screen .loading{inset:0}@media(max-width:640px){.page{padding:12px;gap:10px}.brand{gap:8px}.brand h1{font-size:15px;letter-spacing:0}.brand p{display:none}.mark{width:30px;height:30px}.actions{gap:6px}.action{font-size:12px;padding:6px 9px;min-height:34px}.footbar{font-size:10px;align-items:flex-start}.footbar .controls{max-width:75%}.loading{padding:12px}.planet{width:48px;height:48px;margin-bottom:10px}.loading h2{font-size:18px}.loading-note{font-size:11px}.progress-group{margin-top:14px}.progress-info{font-size:10px}}@media(max-height:420px){.page{gap:8px;padding:8px 16px}.mark,.brand p{display:none}.brand h1{font-size:14px}.action{min-height:28px;padding:3px 9px;font-size:11px}.footbar{font-size:10px}.planet{width:40px;height:40px;margin-bottom:6px}.loading h2{font-size:17px;margin-bottom:4px}.loading-note{font-size:11px}.progress-group{margin-top:12px}}
+</style>
+<style>.loading.error .planet{display:none}.loading.error .loading-note{max-height:40%;overflow:auto}.loading.error .retry{margin-top:12px}.record-action[aria-pressed="true"]{color:#943f38;border-color:#bd8278;background:#fff0e8}.record-time{font-variant-numeric:tabular-nums}.footer-details{min-width:0}.recording-note{font-size:11px;color:#73836a}.recording-result{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:4px}.recording-result[hidden],[hidden]{display:none!important}.recording-result a{color:#35573c;font-weight:600;text-underline-offset:3px}.recording-result button{border:0;background:transparent;padding:0;color:#6a7b61;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.recording-meta{font-size:11px}.footbar{align-items:flex-start}@media(max-width:640px){.topbar{flex-wrap:wrap;gap:8px}.actions{margin-left:auto}.footbar .controls{max-width:none}.recording-note,.recording-meta{font-size:10px}}@media(max-height:420px){.recording-note{font-size:10px}.recording-result{margin-top:0}}</style>
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="17" r="9" stroke="#59734a" stroke-width="1.5"/><path d="M4 21c4 3 20-4 24-10M16 8c-1-4 1-6 5-6-1 4-2 6-5 6Z" stroke="#59734a" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+      <div><h1>捡个星球慢慢造</h1><p>SMALL PLANET · SLOWLY BUILT TOGETHER</p></div>
+    </div>
+    <nav class="actions" aria-label="游戏页面操作">
+      <a class="action" href="/" aria-label="返回游戏入口"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m11 5-5 5 5 5M6 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>返回入口</a>
+      <button class="action record-action" id="record" type="button" disabled aria-pressed="false" title="录制实际游戏画面，无音轨，最长 5 分钟"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="5" fill="currentColor"/></svg><span id="record-label">录屏</span><time class="record-time" id="record-time" hidden>00:00</time></button>
+      <button class="action" id="fullscreen" type="button" disabled title="全屏显示 · Esc 退出"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>全屏</span></button>
+    </nav>
+  </header>
+  <main class="stage-area" id="stage-area" aria-label="家园游戏">
+    <div class="stage" id="unity-stage">
+      <canvas id="unity-canvas" width="1280" height="720" tabindex="0" aria-label="捡个星球慢慢造，WASD 移动，E 互动">你的浏览器暂不支持 Canvas，请使用支持 WebGL 的浏览器。</canvas>
+      <div class="loading" id="loading" role="status" aria-live="polite">
+        <svg class="planet" viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="50" cy="54" r="28" fill="#d4dfbf"/><path d="M23 58c3-13 16-20 28-19 7 1 8 8 15 9 6 2 8 0 12 5" stroke="#a6bd8d" stroke-width="8" stroke-linecap="round"/><circle cx="50" cy="54" r="28" stroke="#688454" stroke-width="1.5"/><path d="M17 67c9 11 66-14 69-29M50 26c-2-10 4-16 14-16-1 10-6 15-14 16Z" stroke="#688454" stroke-width="1.5" stroke-linecap="round"/><path d="m17 22 2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z" fill="#b6bf8d"/></svg>
+        <h2 id="loading-title">正在寻找你的小星球</h2>
+        <p class="loading-note" id="loading-note">正在检查游戏构建…</p>
+        <div class="progress-group" id="progress-group">
+          <div class="progress-track" id="progress" role="progressbar" aria-label="Unity 游戏加载进度" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="progress-info"><span id="progress-label">等待真实加载进度</span><span id="progress-value">—</span></div>
+        </div>
+        <button class="action retry" id="retry" type="button" hidden>重新加载</button>
+      </div>
+    </div>
+  </main>
+  <footer class="footbar"><div class="footer-details"><p class="controls">WASD 移动 · E 互动 · 鼠标旋转和缩放 · 点击画面开始操作</p><p class="recording-note" id="recording-status" role="status" aria-live="polite">录屏仅含游戏画面，无音轨 · 最长 5 分钟 · 停止后请下载保存</p><div class="recording-result" id="recording-result" hidden><a id="recording-download">下载录屏</a><button id="recording-remove" type="button">移除</button><span class="recording-meta" id="recording-meta"></span></div></div><p class="run-status" id="run-status" data-state="loading"><span class="status-dot" aria-hidden="true"></span><span id="status-text">准备游戏</span></p></footer>
+</div>
+<script>
+(() => {
+  'use strict';
+  const canvas = document.getElementById('unity-canvas');
+  const stage = document.getElementById('unity-stage');
+  const area = document.getElementById('stage-area');
+  const loading = document.getElementById('loading');
+  const title = document.getElementById('loading-title');
+  const note = document.getElementById('loading-note');
+  const progress = document.getElementById('progress');
+  const progressFill = document.getElementById('progress-fill');
+  const progressLabel = document.getElementById('progress-label');
+  const progressValue = document.getElementById('progress-value');
+  const status = document.getElementById('run-status');
+  const statusText = document.getElementById('status-text');
+  const fullscreen = document.getElementById('fullscreen');
+  const record = document.getElementById('record');
+  const recordLabel = document.getElementById('record-label');
+  const recordTime = document.getElementById('record-time');
+  const recordingStatus = document.getElementById('recording-status');
+  const recordingResult = document.getElementById('recording-result');
+  const recordingDownload = document.getElementById('recording-download');
+  const recordingMeta = document.getElementById('recording-meta');
+  const recordingSupported = typeof canvas.captureStream === 'function' && typeof window.MediaRecorder === 'function';
+  let unityInstance = null;
+  let failed = false;
+  let recorder = null;
+  let capture = null;
+  let recordingState = 'idle';
+  let recordingStarted = 0;
+  let recordingTimer = null;
+  let recordingLimit = null;
+  let clip = null;
+  let leaving = false;
+
+  function elapsedLabel(milliseconds) {
+    const seconds = Math.max(0, Math.floor(milliseconds / 1000));
+    return String(Math.floor(seconds / 60)).padStart(2, '0') + ':' + String(seconds % 60).padStart(2, '0');
+  }
+
+  function updateRecordButton() {
+    const active = recordingState !== 'idle';
+    record.disabled = !recordingSupported || !unityInstance || failed || recordingState === 'starting' || recordingState === 'stopping' || (!active && !!clip && !clip.downloaded);
+    record.setAttribute('aria-pressed', String(active));
+    recordLabel.textContent = recordingState === 'starting' ? '正在开始' : recordingState === 'stopping' ? '正在保存' : active ? '停止录屏' : clip ? '再录一段' : '录屏';
+    recordTime.hidden = !active;
+    record.title = clip && !clip.downloaded && !active ? '请先下载或移除上一段录屏，避免丢失' : '录制实际游戏画面，无音轨，最长 5 分钟';
+  }
+
+  function releaseCapture() {
+    clearInterval(recordingTimer);
+    clearTimeout(recordingLimit);
+    recordingTimer = recordingLimit = null;
+    if (capture) capture.getTracks().forEach(track => track.stop());
+    capture = null;
+  }
+
+  function removeClip() {
+    if (clip) URL.revokeObjectURL(clip.url);
+    clip = null;
+    recordingDownload.removeAttribute('href');
+    recordingDownload.removeAttribute('download');
+    recordingResult.hidden = true;
+    recordingMeta.textContent = '';
+    updateRecordButton();
+  }
+
+  function stopRecording(reason) {
+    if (!recorder || recordingState === 'stopping' || recordingState === 'idle') return;
+    recordingState = 'stopping';
+    recordingStatus.textContent = reason || '正在整理录屏，请稍候…';
+    updateRecordButton();
+    if (recorder.state !== 'inactive') recorder.stop();
+  }
+
+  function startRecording() {
+    if (!recordingSupported || !unityInstance || failed || recordingState !== 'idle' || (clip && !clip.downloaded)) return;
+    removeClip();
+    recordingState = 'starting';
+    recordingStarted = 0;
+    recordTime.textContent = '00:00';
+    recordingStatus.textContent = '正在启动画面录屏…';
+    updateRecordButton();
+    let chunks = [];
+    let recorderError = '';
+    const width = canvas.width;
+    const height = canvas.height;
+    const startedAt = new Date();
+    try {
+      capture = canvas.captureStream(30);
+      const track = capture.getVideoTracks()[0];
+      if (!track || track.readyState !== 'live') throw new Error('浏览器没有提供有效的画面轨道');
+      const mimeType = ['video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm', 'video/mp4'].find(type => typeof MediaRecorder.isTypeSupported === 'function' && MediaRecorder.isTypeSupported(type));
+      const currentRecorder = new MediaRecorder(capture, {videoBitsPerSecond:8000000, ...(mimeType ? {mimeType} : {})});
+      recorder = currentRecorder;
+      currentRecorder.ondataavailable = event => {
+        if (event.data && event.data.size > 0) chunks.push(event.data);
+      };
+      currentRecorder.onstart = () => {
+        if (recordingState !== 'starting') return;
+        recordingStarted = performance.now();
+        recordingState = 'recording';
+        recordingStatus.textContent = '正在录制实际游戏画面（无音轨）· 退出全屏后点击“停止录屏”保存';
+        updateRecordButton();
+        recordingTimer = setInterval(() => {
+          const elapsed = performance.now() - recordingStarted;
+          recordTime.textContent = elapsedLabel(elapsed);
+          if (elapsed >= 300000) stopRecording('已达到 5 分钟上限，正在保存…');
+        }, 250);
+        recordingLimit = setTimeout(() => stopRecording('已达到 5 分钟上限，正在保存…'), 300000);
+      };
+      currentRecorder.onerror = event => {
+        recorderError = event.error && event.error.message ? event.error.message : '浏览器录制发生错误';
+        recordingStatus.textContent = '录屏失败：' + recorderError;
+        stopRecording('录屏异常结束，正在检查已有片段…');
+      };
+      currentRecorder.onstop = () => {
+        const duration = recordingStarted ? performance.now() - recordingStarted : 0;
+        const type = currentRecorder.mimeType || (chunks[0] && chunks[0].type) || mimeType || 'video/webm';
+        const blob = new Blob(chunks, {type});
+        chunks = [];
+        releaseCapture();
+        recorder = null;
+        recordingState = 'idle';
+        if (leaving) return;
+        if (!blob.size) {
+          recordingStatus.textContent = '录屏失败：' + (recorderError || '没有收到视频数据，请重试或更换浏览器');
+          updateRecordButton();
+          return;
+        }
+        const date = [startedAt.getFullYear(), String(startedAt.getMonth() + 1).padStart(2, '0'), String(startedAt.getDate()).padStart(2, '0')].join('');
+        const time = [startedAt.getHours(), startedAt.getMinutes(), startedAt.getSeconds()].map(value => String(value).padStart(2, '0')).join('');
+        clip = {blob, url:URL.createObjectURL(blob), downloaded:false};
+        recordingDownload.href = clip.url;
+        recordingDownload.download = 'small-planet-recording-' + date + '-' + time + (type.includes('mp4') ? '.mp4' : '.webm');
+        recordingMeta.textContent = width + ' × ' + height + ' · ' + elapsedLabel(duration) + ' · ' + (blob.size / 1048576).toFixed(1) + ' MB · 无音轨';
+        recordingResult.hidden = false;
+        recordingStatus.textContent = recorderError ? '录屏异常结束：' + recorderError + '。可下载已有片段。' : (duration >= 300000 ? '已达到 5 分钟上限，录屏自动停止。' : '录屏已停止。') + '请点击“下载录屏”保存；未下载时刷新或离开会丢失。';
+        updateRecordButton();
+      };
+      track.addEventListener('ended', () => {
+        if (recordingState === 'recording') {
+          recorderError = '游戏画面轨道已中断';
+          stopRecording('画面轨道已中断，正在保存已有片段…');
+        }
+      });
+      currentRecorder.start(1000);
+    } catch (error) {
+      releaseCapture();
+      recorder = null;
+      recordingState = 'idle';
+      recordingStatus.textContent = '无法开始录屏：' + (error.message || String(error));
+      updateRecordButton();
+    }
+  }
+
+  record.addEventListener('click', () => {
+    if (recordingState === 'recording') stopRecording();
+    else if (recordingState === 'idle') startRecording();
+  });
+  recordingDownload.addEventListener('click', () => {
+    if (!clip) return;
+    clip.downloaded = true;
+    recordingStatus.textContent = '已发起下载，请确认浏览器已保存文件；当前视频仍可再次下载。';
+    updateRecordButton();
+  });
+  document.getElementById('recording-remove').addEventListener('click', () => {
+    if (clip && !clip.downloaded && !window.confirm('这段录屏还未下载，确定移除吗？')) return;
+    removeClip();
+    recordingStatus.textContent = '录屏已移除。录屏仅含游戏画面，无音轨，最长 5 分钟。';
+  });
+  window.addEventListener('beforeunload', event => {
+    if (recordingState !== 'idle' || (clip && !clip.downloaded)) {
+      event.preventDefault();
+      event.returnValue = '';
+    }
+  });
+  window.addEventListener('pagehide', event => {
+    leaving = !event.persisted;
+    stopRecording('页面已离开，正在保存已有片段…');
+    releaseCapture();
+    if (leaving) removeClip();
+  });
+  if (!recordingSupported) recordingStatus.textContent = '当前浏览器不支持画面录屏，请使用支持 captureStream 和 MediaRecorder 的浏览器。';
+
+  function fitStage() {
+    if (document.fullscreenElement === stage || document.webkitFullscreenElement === stage) return;
+    const bounds = area.getBoundingClientRect();
+    const width = Math.max(1, Math.min(1600, bounds.width, bounds.height * 16 / 9));
+    stage.style.width = width + 'px';
+    stage.style.height = width * 9 / 16 + 'px';
+  }
+  if ('ResizeObserver' in window) new ResizeObserver(fitStage).observe(area);
+  window.addEventListener('resize', fitStage);
+  document.addEventListener('fullscreenchange', fitStage);
+  document.addEventListener('webkitfullscreenchange', fitStage);
+  fitStage();
+
+  function showError(message) {
+    if (failed) return;
+    failed = true;
+    loading.hidden = false;
+    loading.classList.add('error');
+    title.textContent = '小星球暂时没有连接上';
+    note.textContent = String(message || '游戏加载失败，请刷新重试。').slice(0, 600);
+    document.getElementById('retry').hidden = false;
+    fullscreen.disabled = true;
+    stopRecording('游戏发生错误，正在保存已有片段…');
+    updateRecordButton();
+    status.dataset.state = 'error';
+    statusText.textContent = '加载未完成';
+  }
+
+  function sameOriginUrl(value, field) {
+    if (typeof value !== 'string' || !value) throw new Error('构建信息缺少 ' + field + '，请重新生成网页游戏。');
+    const url = new URL(value, window.location.href);
+    if (url.origin !== window.location.origin) throw new Error('游戏资源必须与本页来自同一服务。');
+    return url.href;
+  }
+
+  function loadScript(url) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = url;
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = () => reject(new Error('Unity 加载器下载失败。请检查本机服务与 WebGL 构建文件后重试。'));
+      document.body.appendChild(script);
+    });
+  }
+
+  function onProgress(value) {
+    if (failed) return;
+    const fraction = Math.max(0, Math.min(1, Number(value) || 0));
+    const percent = Math.round(fraction * 100);
+    progressFill.style.width = percent + '%';
+    progress.setAttribute('aria-valuenow', String(percent));
+    progressValue.textContent = percent + '%';
+    progressLabel.textContent = fraction < 1 ? 'Unity 实际加载进度' : '资源已加载，正在初始化';
+    note.textContent = '首次进入需要下载游戏资源，请稍候。';
+  }
+
+  window.publicSetFullscreen = async function () {
+    if (!unityInstance || failed) return;
+    try {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) await document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      } else if (stage.requestFullscreen) await stage.requestFullscreen();
+      else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen();
+      else unityInstance.SetFullscreen(1);
+      canvas.focus({preventScroll:true});
+    } catch (error) {
+      statusText.textContent = '浏览器未允许全屏，可继续游玩';
+    }
+  };
+  fullscreen.addEventListener('click', window.publicSetFullscreen);
+  canvas.addEventListener('pointerdown', () => canvas.focus({preventScroll:true}));
+  document.getElementById('retry').addEventListener('click', () => window.location.reload());
+
+  async function start() {
+    try {
+      const response = await fetch('/api/submission/build', {cache:'no-store'});
+      if (!response.ok) throw new Error('无法读取游戏构建信息（HTTP ' + response.status + '）。请确认本机游戏服务正在运行。');
+      const build = await response.json();
+      if (!build.ready) throw new Error(build.message || '网页游戏尚未构建，请按 README 完成 WebGL 构建后重试。');
+      const config = {
+        dataUrl:sameOriginUrl(build.dataUrl, 'dataUrl'),
+        frameworkUrl:sameOriginUrl(build.frameworkUrl, 'frameworkUrl'),
+        codeUrl:sameOriginUrl(build.codeUrl, 'codeUrl'),
+        streamingAssetsUrl:sameOriginUrl(build.streamingAssetsUrl, 'streamingAssetsUrl'),
+        companyName:build.companyName || 'Small Planet',
+        productName:build.productName || '捡个星球慢慢造',
+        productVersion:build.productVersion || '0.1',
+        devicePixelRatio:Math.min(window.devicePixelRatio || 1, 1.5),
+        showBanner:(message, type) => {
+          if (type === 'error') showError(message);
+          else console.warn('[Unity]', message);
+        }
+      };
+      note.textContent = '正在下载 Unity 加载器…';
+      statusText.textContent = '加载游戏';
+      await loadScript(sameOriginUrl(build.loaderUrl, 'loaderUrl'));
+      if (typeof window.createUnityInstance !== 'function') throw new Error('Unity 加载器没有提供启动函数，请检查构建文件是否完整。');
+      note.textContent = '正在下载游戏资源，等待 Unity 返回进度…';
+      unityInstance = await window.createUnityInstance(canvas, config, onProgress);
+      if (failed) return;
+      loading.hidden = true;
+      fullscreen.disabled = false;
+      updateRecordButton();
+      status.dataset.state = 'running';
+      statusText.textContent = '家园已就绪';
+      canvas.focus({preventScroll:true});
+      fitStage();
+    } catch (error) {
+      showError(error && error.message ? error.message : error);
+    }
+  }
+  start();
+})();
+</script>
+</body>
+</html>

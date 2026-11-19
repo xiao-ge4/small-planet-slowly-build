@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "source": "artifacts/rigging-study/pet-46764-interactions.glb",
+      "asset": "unity/DawnGarden/Assets/DawnGarden/Art/Characters/Pet.glb",
+      "sha256": "b612d81b421e213b18afbe042fbe4bd0531f23ab607d4e54c440968c2601b4cb"
+    },
+    {
+      "source": "artifacts/interaction-assets/watering-can.glb",
+      "asset": "unity/DawnGarden/Assets/DawnGarden/Art/Props/WateringCan.glb",
+      "sha256": "8ea38216786b14726e2b6706103bf76b164154f9e1680dc58d463f21b8df5c2e"
+    },
+    {
+      "source": "artifacts/interaction-assets/treasure-chest-interactive.glb",
+      "asset": "unity/DawnGarden/Assets/DawnGarden/Art/Props/InteractiveChest.glb",
+      "sha256": "7ff376f6ffad11df370c84b43ff9a2ffc4d0f75d1a889a1bbaae150e4870f278"
+    }
+  ]
+}

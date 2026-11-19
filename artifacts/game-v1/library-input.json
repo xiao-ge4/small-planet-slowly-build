@@ -1,0 +1,312 @@
+{
+  "assets": [
+    {
+      "id": "ember-boulder",
+      "name": "暖焰砂岩",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-boulder.prefab",
+      "size": {
+        "x": 1.3352569341659546,
+        "y": 0.9008614420890808,
+        "z": 1.387143611907959
+      },
+      "center": {
+        "x": 0.000610649585723877,
+        "y": 0.44956931471824646,
+        "z": 0.0002015829086303711
+      },
+      "hash": "2e4b96035a44a327fbfa7bf6f8698357b737861330d5663a7769f6e0ebb16254",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": 0.000610649585723877,
+        "y": 0.40452624261379244,
+        "z": 0.0002015829086303711
+      },
+      "collisionSize": {
+        "x": 1.1349683940410613,
+        "y": 0.8107752978801728,
+        "z": 1.1790720701217652
+      }
+    },
+    {
+      "id": "ember-monument",
+      "name": "暖焰石碑",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-monument.prefab",
+      "size": {
+        "x": 0.9792933464050293,
+        "y": 1.750337839126587,
+        "z": 0.5584172010421753
+      },
+      "center": {
+        "x": -0.0002111494541168213,
+        "y": 0.8751689195632935,
+        "z": 0.00028458237648010254
+      },
+      "hash": "41bffef91d45172139f69e137c89391ea1c6e2cfe143a58e749855b9c4bd3676",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": -0.0002111494541168213,
+        "y": 0.7876520276069642,
+        "z": 0.00028458237648010254
+      },
+      "collisionSize": {
+        "x": 0.8323993444442749,
+        "y": 1.5753040552139284,
+        "z": 0.474654620885849
+      }
+    },
+    {
+      "id": "ember-tent-v2",
+      "name": "暖焰营帐",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-tent-v2.prefab",
+      "size": {
+        "x": 2.104250192642212,
+        "y": 2.0602126121520996,
+        "z": 2.0982439517974854
+      },
+      "center": {
+        "x": 0.0005099773406982422,
+        "y": 1.0210939645767212,
+        "z": 0.0004832744598388672
+      },
+      "hash": "481e34228a7f53f4074228aac3d34e8e3f464f63ee48856ee5e4d374d06fb558",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": 0.0005099773406982422,
+        "y": 0.9180833339691162,
+        "z": 0.0004832744598388672
+      },
+      "collisionSize": {
+        "x": 1.7886126637458801,
+        "y": 1.8541913509368897,
+        "z": 1.7835073590278625
+      }
+    },
+    {
+      "id": "ember-tree",
+      "name": "暖焰树木",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/EmberCamp/ember-tree.prefab",
+      "size": {
+        "x": 2.989640474319458,
+        "y": 3.2580337524414062,
+        "z": 2.7325682640075684
+      },
+      "center": {
+        "x": 0.0006791353225708008,
+        "y": 1.6222690343856812,
+        "z": -0.001866459846496582
+      },
+      "hash": "0848cddd019c51901a202f767a03829aefcc9b2d5abe7157b259f3b941d389e9",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": 0.0006791353225708008,
+        "y": 0.8077605962753296,
+        "z": -0.001866459846496582
+      },
+      "collisionSize": {
+        "x": 0.7474101185798645,
+        "y": 1.6290168762207031,
+        "z": 0.6831420660018921
+      }
+    },
+    {
+      "id": "garden-tree",
+      "name": "晨曦阔叶树",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/garden-tree.prefab",
+      "size": {
+        "x": 3.207664728164673,
+        "y": 3.5198705196380615,
+        "z": 3.104614734649658
+      },
+      "center": {
+        "x": -0.0075185298919677734,
+        "y": 1.757623314857483,
+        "z": 0.005808830261230469
+      },
+      "hash": "b6c5e2fbd0e0a11b5872fa6a8d809d8f001ee691fb1b3b550d60663f04bdd78b",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": -0.0075185298919677734,
+        "y": 0.8776556849479675,
+        "z": 0.005808830261230469
+      },
+      "collisionSize": {
+        "x": 0.8019161820411682,
+        "y": 1.7599352598190308,
+        "z": 0.7761536836624146
+      }
+    },
+    {
+      "id": "meadow-flower",
+      "name": "草地小白花",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/meadow-flower.prefab",
+      "size": {
+        "x": 0.2683621644973755,
+        "y": 0.2839999794960022,
+        "z": 0.28217267990112305
+      },
+      "center": {
+        "x": -0.001818925142288208,
+        "y": 0.1419999897480011,
+        "z": 1.4901161193847656e-08
+      },
+      "hash": "53945511a01cef385d8fbc3877875fc31bef922ee86e8902483c774eea1d1aa8",
+      "createCollider": false,
+      "collisionCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "collisionSize": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "moss-boulder",
+      "name": "苔藓岩石",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/moss-boulder.prefab",
+      "size": {
+        "x": 2.029989719390869,
+        "y": 1.0000452995300293,
+        "z": 2.0304179191589355
+      },
+      "center": {
+        "x": -0.0009195804595947266,
+        "y": 0.49997732043266296,
+        "z": 0.0008634328842163086
+      },
+      "hash": "2ccce96d443f655fbd0fca47e3177241ccd98f3bd517ec6d41c2a8206b4c7766",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": -0.0009195804595947266,
+        "y": 0.4499750554561615,
+        "z": 0.0008634328842163086
+      },
+      "collisionSize": {
+        "x": 1.7254912614822386,
+        "y": 0.9000407695770264,
+        "z": 1.7258552312850952
+      }
+    },
+    {
+      "id": "mossy-stone-bench",
+      "name": "苔石长凳",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/PreparedHomes/3ea386b9e1f54c399406cc67a44c4430/v1/mossy-stone-bench/mossy-stone-bench.prefab",
+      "size": {
+        "x": 1.3992280960083008,
+        "y": 0.4503713846206665,
+        "z": 0.6348565220832825
+      },
+      "center": {
+        "x": 0.0,
+        "y": 0.22508148849010468,
+        "z": -1.6987323760986328e-05
+      },
+      "hash": "5c32a4ab36939705655eac38d3e13bcd4dceaae65db3ca53665cbe2eaf4b8930",
+      "createCollider": false,
+      "collisionCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "collisionSize": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "stepping-stone",
+      "name": "石板路",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/stepping-stone.prefab",
+      "size": {
+        "x": 0.6417136788368225,
+        "y": 0.10999999940395355,
+        "z": 0.5000476241111755
+      },
+      "center": {
+        "x": -0.005077667068690062,
+        "y": 0.0,
+        "z": 0.0031195878982543945
+      },
+      "hash": "5c2b47ff90e67de3b0dded426b72b200260585ff4e329518e79a67a9cda90d94",
+      "createCollider": false,
+      "collisionCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "collisionSize": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "tool-stump",
+      "name": "工具树桩",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/tool-stump.prefab",
+      "size": {
+        "x": 0.9124120473861694,
+        "y": 0.5154641270637512,
+        "z": 0.9593667984008789
+      },
+      "center": {
+        "x": -0.02379399538040161,
+        "y": 0.2577320635318756,
+        "z": 0.0
+      },
+      "hash": "638dd785f316d697d9d17e999894ca2199861731adb38c336341b43e219ae675",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": -0.02379399538040161,
+        "y": 0.23195885717868805,
+        "z": 0.0
+      },
+      "collisionSize": {
+        "x": 0.775550240278244,
+        "y": 0.4639177143573761,
+        "z": 0.8154617786407471
+      }
+    },
+    {
+      "id": "travel-monument",
+      "name": "晨曦水晶石碑",
+      "version": 1,
+      "prefabPath": "Assets/DawnGarden/Prefabs/Garden/travel-monument.prefab",
+      "size": {
+        "x": 1.0934195518493652,
+        "y": 1.7518284320831299,
+        "z": 0.6327013373374939
+      },
+      "center": {
+        "x": 0.0003940463066101074,
+        "y": 0.8746145367622375,
+        "z": -5.066394805908203e-05
+      },
+      "hash": "aa43f84e09a8ca2c99badab7e7349cebda6dffb593df5ca7a37d564fc23bbec6",
+      "createCollider": true,
+      "collisionCenter": {
+        "x": 0.0003940463066101074,
+        "y": 0.7870231151580811,
+        "z": -5.066394805908203e-05
+      },
+      "collisionSize": {
+        "x": 0.9294066190719604,
+        "y": 1.576645588874817,
+        "z": 0.5377961367368698
+      }
+    }
+  ]
+}

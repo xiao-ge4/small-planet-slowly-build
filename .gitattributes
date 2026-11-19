@@ -1,0 +1,2 @@
+# Asset catalog hashes must survive checkout without line-ending conversion.
+* -text

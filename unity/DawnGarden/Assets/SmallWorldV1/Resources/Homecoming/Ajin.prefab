@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8124207883516851857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8944923706844042851}
+  - component: {fileID: 2211627527319661949}
+  m_Layer: 0
+  m_Name: Ajin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8944923706844042851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8124207883516851857}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7290919748375321333}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2211627527319661949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8124207883516851857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db194b96420894dd2818a9b78a424ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DawnGarden.SmallWorldAjinActor
+  rig: {fileID: 1336935416502034188}
+--- !u!1001 &3213268034926711473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8944923706844042851}
+    m_Modifications:
+    - target: {fileID: -4748361991329772099, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd00a4b8d18a54c10ac6e9a8278ec61b, type: 2}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8423884
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8423884
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8423884
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.012622603
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20722252
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000088567765
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771091787928289351, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+      propertyPath: m_Name
+      value: Ajin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: -4161369568681901532, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+--- !u!95 &1336935416502034188 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -4748361991329772099, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+  m_PrefabInstance: {fileID: 3213268034926711473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7290919748375321333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3910990755373119420, guid: 82088c76ca6f24489ab7d4b8839a9b98, type: 3}
+  m_PrefabInstance: {fileID: 3213268034926711473}
+  m_PrefabAsset: {fileID: 0}

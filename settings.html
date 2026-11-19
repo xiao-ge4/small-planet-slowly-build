@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>提示词配置 · 物件精灵</title>
+  <link rel="stylesheet" href="styles.css"><script src="settings.js" defer></script>
+</head>
+<body class="settings-page">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="物件精灵工作台"><span class="brand-mark">Q</span>物件精灵<span class="brand-sub">PROMPT STUDIO</span></a>
+    <a class="ghost-btn back-workbench" href="/">← 返回工作台</a>
+  </header>
+  <main class="shell settings-shell">
+    <section class="intro-row settings-intro"><div><p class="eyebrow">PROMPT CONFIGURATION</p><h1>把创作规则，调成你想要的样子。</h1><p class="lede">统一规则与各步骤指令分开编辑，保存后应用到后续生成。</p></div><span class="mode-badge" id="activeRevision">正在读取…</span></section>
+    <div id="settingsNotice" class="notice hidden" role="alert"></div>
+    <div class="settings-layout">
+      <form id="settingsForm" class="settings-editor">
+        <fieldset id="promptFields" disabled>
+          <section class="settings-card"><div class="settings-heading"><span class="step-label">01 / COMMON RULES</span><h2>所有设计共用</h2><p>这三项会同时用于首次生成与后续修改。</p></div>
+            <label class="prompt-field" for="style"><span>游戏美术规则 <small>比例、轮廓、配色与材质</small></span><textarea id="style" rows="7" maxlength="2000" required></textarea></label>
+            <label class="prompt-field" for="composition"><span>主体、构图与画面约束 <small>白底单主体，排除文字与外围装饰</small></span><textarea id="composition" rows="10" maxlength="2000" required></textarea></label>
+            <label class="prompt-field" for="negative"><span>负向提示词 <small>单独传入 Qwen negative_prompt，最多 500 字，可留空</small></span><textarea id="negative" rows="5" maxlength="500"></textarea></label>
+          </section>
+          <section class="settings-card"><div class="settings-heading"><span class="step-label">02 / GENERATION STEPS</span><h2>每一步怎么生成</h2><p>按实际输入选择对应步骤，再拼入共用规则、参考图用途与用户文字。</p></div>
+            <label class="prompt-field" for="textDesign"><span>纯文字 → 首张设计图</span><textarea id="textDesign" rows="3" maxlength="2000" required></textarea></label>
+            <label class="prompt-field" for="referenceDesign"><span>参考图 → 首张设计图</span><textarea id="referenceDesign" rows="4" maxlength="2000" required></textarea></label>
+            <label class="prompt-field" for="revision"><span>选中设计图 → 继续修改</span><textarea id="revision" rows="5" maxlength="2000" required></textarea></label>
+            <label class="prompt-field" for="defaultIdea"><span>有参考图、未填写想法时的默认要求</span><textarea id="defaultIdea" rows="3" maxlength="2000" required></textarea></label>
+          </section>
+          <section class="settings-card"><div class="settings-heading"><span class="step-label">02B / ANTHROPOMORPHIC STAGE</span><h2>拟人形象规则</h2><p>拟人阶段独立使用这些规则；首版固定生成幼年、四分之三视角、适合骨骼绑定的单个精灵。</p></div>
+            <label class="prompt-field" for="anthroStyle"><span>幼年精灵风格</span><textarea id="anthroStyle" rows="6" maxlength="2400" required></textarea></label>
+            <label class="prompt-field" for="anthroBase"><span>原物件 → 幼年精灵</span><textarea id="anthroBase" rows="6" maxlength="2400" required></textarea></label>
+            <label class="prompt-field" for="anthroRevision"><span>拟人版本继续修改</span><textarea id="anthroRevision" rows="5" maxlength="2400" required></textarea></label>
+            <label class="prompt-field" for="anthroComposition"><span>角色构图与绑定约束</span><textarea id="anthroComposition" rows="6" maxlength="2400" required></textarea></label>
+            <label class="prompt-field" for="anthroDefaultIdea"><span>拟人阶段默认要求</span><textarea id="anthroDefaultIdea" rows="3" maxlength="2400" required></textarea></label>
+            <label class="prompt-field" for="anthroNegative"><span>拟人阶段负向提示词</span><textarea id="anthroNegative" rows="5" maxlength="500"></textarea></label>
+          </section>
+        </fieldset>
+        <fieldset id="agentFields" disabled>
+          <section class="settings-card"><div class="settings-heading"><span class="step-label">03 / INTERNAL QUALITY AGENT</span><h2>内部检查与修正</h2><p>首次生图后检查，决定接受、编辑当前图或从本轮原始输入重生成。中间候选与修正上限不在创作页面展示。配置仅供本地管理，正式上线前需接入管理员鉴权。</p><p id="agentConnection" class="subtle"></p></div>
+            <label class="prompt-field" for="agentModel"><span>视觉 Agent 模型</span><input id="agentModel" required maxlength="100"></label>
+            <label class="prompt-field" for="agentApiUrl"><span>Agent API 地址 <small>服务端读取 QWEN_AGENT_API_KEY，未设置时使用 QWEN_API_KEY</small></span><input id="agentApiUrl" type="url" required maxlength="300"></label>
+            <label class="prompt-field" for="agentMaxCorrections"><span>自动修正上限 <small>首次生成之外的修正次数，0–5；默认 2 次</small></span><input id="agentMaxCorrections" type="number" min="0" max="5" step="1" required></label>
+            <label class="prompt-field" for="agentTimeoutSeconds"><span>单次检查超时（秒）</span><input id="agentTimeoutSeconds" type="number" min="15" max="300" step="1" required></label>
+            <label class="prompt-field" for="agentInstruction"><span>检查标准与决策提示词</span><textarea id="agentInstruction" rows="12" maxlength="6000" required></textarea></label>
+            <label class="prompt-field" for="agentRepairInstruction"><span>执行修正时的共用提示词 <small>自动拼入用户要求、Agent 修正意见与原有美术规则</small></span><textarea id="agentRepairInstruction" rows="4" maxlength="2000" required></textarea></label>
+            <label class="prompt-field" for="agentInputPrice"><span>输入估价（元 / 百万 Token）</span><input id="agentInputPrice" type="number" min="0" max="1000" step="any" required></label>
+            <label class="prompt-field" for="agentOutputPrice"><span>输出估价（元 / 百万 Token）</span><input id="agentOutputPrice" type="number" min="0" max="1000" step="any" required></label>
+            <p class="subtle">每次检查后保存决策和用量。异常时保留候选供用户检查；不会自动重复提交未知结果的收费请求，也不会自动生成 3D。</p>
+          </section>
+        </fieldset>
+        <section class="settings-card model-setting"><span class="step-label">04 / IMAGE TO 3D</span><h2>确认设计图 → 3D</h2><p>当前 Aholo G1-Turbo 图生 3D 步骤仅接收选中的设计图，不传入文本提示词。主体和画面的要求在生图阶段应用。</p><p>拟人模型会记录原物件定稿版本、拟人设计图和模型的来源关系。</p></section>
+        <div class="settings-savebar"><div><strong id="dirtyState" role="status">正在读取配置</strong><small>全工作台共用 · 任务提交时保存配置快照</small></div><button type="button" class="ghost-btn" id="resetPrompts" disabled>填入推荐默认值</button><button class="primary-btn" id="savePrompts" type="submit" disabled>保存并应用</button></div>
+      </form>
+      <aside class="settings-preview settings-card"><div class="settings-heading"><span class="step-label">LIVE PREVIEW</span><h2>检查实际生成指令</h2><p>只拼接文字，预览不会调用生图服务或产生费用。预览包含尚未保存的编辑。</p></div>
+        <label class="prompt-field" for="previewStage"><span>预览哪个步骤</span><select id="previewStage"><option value="textDesign">纯文字生成</option><option value="referenceDesign">参考图生成</option><option value="revision">继续修改</option><option value="anthro">拟人幼年角色</option></select></label>
+        <label class="prompt-field" for="previewIdea"><span>试写一条想法或修改意见</span><textarea id="previewIdea" rows="3" maxlength="1500">一只圆润的卡通玻璃杯，保留黄色把手。</textarea></label>
+        <label class="prompt-field hidden" id="previewReferences" for="previewPurposes"><span>参考图用途 <small>每行一张，最多三张；修改时图 1 固定为当前设计</small></span><textarea id="previewPurposes" rows="3">物件正面</textarea></label>
+        <button type="button" class="ghost-btn" id="refreshPreview" disabled>更新预览</button>
+        <p id="previewStatus" class="subtle" role="status"></p>
+        <details open class="settings-prompt-result"><summary>正向提示词</summary><pre id="composedPreview">正在读取…</pre></details>
+        <details open class="settings-prompt-result"><summary>负向提示词</summary><pre id="negativePreview"></pre></details>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
