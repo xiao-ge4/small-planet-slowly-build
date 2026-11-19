@@ -4,7 +4,7 @@
 
 玩家与精灵伙伴从一片小小的落脚地出发，通过照料家园、开启宝箱、挑战土地守卫，以及拜访邻居、交换礼物，获得新的土地和物品。获得空地后，可以与常驻 AI 伙伴“小禾”讨论想法、预览并确认布置，让一颗陌生星球慢慢长成自己的小世界。
 
-![晨曦花园](web/submission/assets/cover.jpg)
+![晨曦花园完整场景实机画面](docs/submission/media/world-overview.jpg)
 
 **[下载可运行试玩包](https://github.com/xiao-ge4/small-planet-slowly-build/releases/tag/v0.1.0)** · [功能与技术边界](docs/submission/BOUNDARIES.md) · [完整启动与构建说明](docs/submission/PLAYABLE-README.md)
 
